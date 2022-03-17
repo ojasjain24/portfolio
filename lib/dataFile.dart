@@ -14,7 +14,7 @@ class portfolioDetails {
   ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
-      "I am a passionate software developer from IIIT Kurnool. I worked on technologies like Flutter, Android, Unity, Java, Python, Augmented Reality, and many more. I love ";
+      "I am a passionate software developer from IIIT Kurnool. I have worked on technologies like Flutter, Android, Unity, Java, Python, Augmented Reality, and many more. I love to build new stuffs.";
 
   static List<iconLinkModel> socials = [
     iconLinkModel("assets/images/google-play.png",
