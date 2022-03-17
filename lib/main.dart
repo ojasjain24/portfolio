@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Neon Widgets',
+      title: 'Ojas Jain',
       routes: {
         '/': (ctx) => SplashScreen(),
       },

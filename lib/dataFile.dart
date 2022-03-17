@@ -12,7 +12,7 @@ class portfolioDetails {
     "Figma",
     "Github",
   ];
-  static String profileImage = "assets/images/myPic.png";
+  static String profileImage = "assets/images/myPic.webp";
   static String bio =
       "I am a passionate software developer from IIIT Kurnool. I worked on technologies like Flutter, Android, Unity, Java, Python, Augmented Reality, and many more. I love ";
 
