@@ -13,8 +13,8 @@ class SplashScreen extends StatefulWidget {
   }
 }
 
-class SplashScreenState extends State<SplashScreen>  with TickerProviderStateMixin {
-
+class SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
@@ -26,7 +26,7 @@ class SplashScreenState extends State<SplashScreen>  with TickerProviderStateMix
   }
 
   @override
-  Widget build(BuildContext context)  {
+  Widget build(BuildContext context) {
     late final AnimationController _controller =
         AnimationController(vsync: this, duration: Duration(seconds: 2))
           ..repeat();
