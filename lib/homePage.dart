@@ -21,147 +21,297 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    List<Widget> widgetTreeHorizontal() {
+      return [
+        Container(
+          clipBehavior: Clip.none,
+          padding: const EdgeInsets.all(40),
+          height: size.height,
+          alignment: Alignment.center,
+          width: size.width / 2,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    portfolioDetails.myName,
+                    style:
+                        TextStyle(color: Colors.white, fontSize: 96, shadows: [
+                      Shadow(color: color, blurRadius: 40),
+                    ]),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    portfolioDetails.bio,
+                    maxLines: 10,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        shadows: [
+                          Shadow(color: Colors.yellow, blurRadius: 20),
+                        ]),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  ...(portfolioDetails.socials.map((e) => InkWell(
+                      onTap: () {
+                        launch(e.link);
+                      },
+                      child: Image.asset(
+                        e.imageAddress,
+                        height: 50,
+                        width: 50,
+                      )))),
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          clipBehavior: Clip.none,
+          height: size.height,
+          width: size.width / 2,
+          alignment: Alignment.bottomRight,
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.bottomCenter,
+            children: [
+              Container(
+                clipBehavior: Clip.none,
+                padding: EdgeInsets.fromLTRB(0, size.height / 3, 0, 0),
+                alignment: Alignment.topCenter,
+                child: oNeonLine(
+                  lineWidth: size.width / 2.5,
+                  lineHeight: 3,
+                  lightSpreadRadius: 10,
+                  lightBlurRadius: 60,
+                  spreadColor: color,
+                ),
+              ),
+              Container(
+                alignment: Alignment.bottomRight,
+                child: ClipPath(
+                  clipper: TriangleClipperHorizontal(),
+                  child: Image.asset(
+                    portfolioDetails.profileImage,
+                    fit: BoxFit.fitHeight,
+                    height: size.height / 1.2,
+                    width: size.width / 2,
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0, // size.height*5 /12,
+                right: size.width / 4,
+                child: oNeonLine(
+                  transformAlignment: Alignment.bottomRight,
+                  transform: Matrix4.rotationZ(atan(
+                    4.166 * (size.height / size.width),
+                  )),
+                  lineWidth: size.height /
+                      (1.2 * sin(atan(3.33 * (size.height / size.width)))),
+                  lineHeight: 3,
+                  lightSpreadRadius: 10,
+                  lightBlurRadius: 60,
+                  spreadColor: color,
+                  // spreadColor: Colors.green,
+                ),
+              ),
+              Positioned(
+                bottom: 0, // size.height*5 /12,
+                right: size.width / 4,
+                child: oNeonLine(
+                  transformAlignment: Alignment.bottomRight,
+                  transform: Matrix4.rotationZ(pi -
+                      atan(
+                        4.166 * (size.height / size.width),
+                      )),
+                  lineWidth: size.height /
+                      (1.2 * sin(atan(3.33 * (size.height / size.width)))),
+                  lineHeight: 3,
+                  lightSpreadRadius: 10,
+                  lightBlurRadius: 60,
+                  spreadColor: color,
+                  // spreadColor: Colors.green,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ];
+    }
+
+    List<Widget> widgetTreeVertical() {
+      return [
+        Container(
+          clipBehavior: Clip.none,
+          padding: const EdgeInsets.all(20),
+          height: size.height,
+          alignment: Alignment.center,
+          width: size.width,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            clipBehavior: Clip.none,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      portfolioDetails.myName,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 74,
+                          shadows: [
+                            Shadow(color: color, blurRadius: 20),
+                          ]),
+                    ),
+                    Container(
+                      clipBehavior: Clip.none,
+                      height: size.width,
+                      width: size.width,
+                      alignment: Alignment.bottomRight,
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Container(
+                            padding:
+                                EdgeInsets.fromLTRB(0, size.height / 5, 0, 0),
+                            alignment: Alignment.topCenter,
+                            child: oNeonLine(
+                              lineWidth: size.width,
+                              lineHeight: 3,
+                              lightSpreadRadius: 2,
+                              lightBlurRadius: 15,
+                              spreadColor: color,
+                            ),
+                            clipBehavior: Clip.none,
+                          ),
+                          Container(
+                            alignment: Alignment.bottomCenter,
+                            child: ClipPath(
+                              clipper: TriangleClipperVertical(),
+                              child: Image.asset(
+                                portfolioDetails.profileImage,
+                                fit: BoxFit.fitHeight,
+                                height: size.width,
+                                width: size.width * 0.9,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: size.width / 2 - 20,
+                            child: oNeonLine(
+                              transformAlignment: Alignment.bottomRight,
+                              transform: Matrix4.rotationZ(atan(2.2)),
+                              lineWidth: size.width / sin(atan(2.2)),
+                              lineHeight: 3,
+                              lightSpreadRadius: 5,
+                              lightBlurRadius: 30,
+                              spreadColor: color,
+                              // spreadColor: Colors.green,
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: size.width / 2 - 20,
+                            child: oNeonLine(
+                              transformAlignment: Alignment.bottomRight,
+                              transform: Matrix4.rotationZ(
+                                pi - atan(2.2),
+                              ),
+                              lineWidth: size.width / sin(atan(2.2)),
+                              lineHeight: 3,
+                              lightSpreadRadius: 5,
+                              lightBlurRadius: 30,
+                              spreadColor: color,
+                              // spreadColor: Colors.green,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      portfolioDetails.bio,
+                      maxLines: 10,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          shadows: [
+                            Shadow(color: Colors.yellow, blurRadius: 10),
+                          ]),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ...(portfolioDetails.socials.map(
+                      (e) => InkWell(
+                        onTap: () {
+                          launch(e.link);
+                        },
+                        child: Image.asset(
+                          e.imageAddress,
+                          height: 50,
+                          width: 50,
+                        ),
+                      ),
+                    )),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+      ];
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Container(
           width: size.width,
           alignment: Alignment.center,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(40),
-                height: size.height,
-                alignment: Alignment.center,
-                width: size.width / 2,
-                child: Column(
+          child: size.width >= 850
+              ? Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          portfolioDetails.myName,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 96,
-                              shadows: [
-                                Shadow(color: color, blurRadius: 40),
-                              ]),
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        Text(
-                          portfolioDetails.bio,
-                          maxLines: 10,
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              shadows: [
-                                Shadow(color: Colors.yellow, blurRadius: 20),
-                              ]),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        ...(portfolioDetails.socials.map((e) => InkWell(
-                            onTap: () {
-                              launch(e.link);
-                            },
-                            child: Image.asset(
-                              e.imageAddress,
-                              height: 50,
-                              width: 50,
-                            )))),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                height: size.height,
-                width: size.width / 2,
-                alignment: Alignment.bottomRight,
-                child: Stack(
-                  alignment: Alignment.bottomCenter,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(0, size.height / 3, 0, 0),
-                      alignment: Alignment.topCenter,
-                      child: oNeonLine(
-                        lineWidth: size.width / 2.5,
-                        lineHeight: 3,
-                        lightSpreadRadius: 10,
-                        lightBlurRadius: 60,
-                        spreadColor: color,
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment.bottomRight,
-                      child: ClipPath(
-                        clipper: TriangleClipper(),
-                        child: Image.asset(
-                          portfolioDetails.profileImage,
-                          fit: BoxFit.fitHeight,
-                          height: size.height / 1.2,
-                          width: size.width / 2,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 0, // size.height*5 /12,
-                      right: size.width / 4,
-                      child: oNeonLine(
-                        transformAlignment: Alignment.bottomRight,
-                        transform: Matrix4.rotationZ(atan(
-                          4.166 * (size.height / size.width),
-                        )),
-                        lineWidth: size.height /
-                            (1.2 *
-                                sin(atan(3.33 * (size.height / size.width)))),
-                        lineHeight: 3,
-                        lightSpreadRadius: 10,
-                        lightBlurRadius: 60,
-                        spreadColor: color,
-                        // spreadColor: Colors.green,
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 0, // size.height*5 /12,
-                      right: size.width / 4,
-                      child: oNeonLine(
-                        transformAlignment: Alignment.bottomRight,
-                        transform: Matrix4.rotationZ(pi -
-                            atan(
-                              4.166 * (size.height / size.width),
-                            )),
-                        lineWidth: size.height /
-                            (1.2 *
-                                sin(atan(3.33 * (size.height / size.width)))),
-                        lineHeight: 3,
-                        lightSpreadRadius: 10,
-                        lightBlurRadius: 60,
-                        spreadColor: color,
-                        // spreadColor: Colors.green,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+                  children: widgetTreeHorizontal())
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: widgetTreeVertical()),
         ),
       ),
     );
   }
 }
 
-class TriangleClipper extends CustomClipper<Path> {
+class TriangleClipperHorizontal extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final path = Path();
@@ -173,5 +323,19 @@ class TriangleClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(TriangleClipper oldClipper) => false;
+  bool shouldReclip(TriangleClipperHorizontal oldClipper) => false;
+}
+
+class TriangleClipperVertical extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width / 2, size.height);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(TriangleClipperVertical oldClipper) => false;
 }
