@@ -37,25 +37,23 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    portfolioDetails.myName,
-                    style:
-                        TextStyle(color: Colors.white, fontSize: 96, shadows: [
-                      Shadow(color: color, blurRadius: 40),
-                    ]),
+                  oFlickerNeonText(
+                    flickerTimeInMilliSeconds: 1000,
+                    randomFlicker: true,
+                    text: portfolioDetails.myName,
+                    textSize: 96,
+                    blurRadius: 40,
+                    spreadColor: color,
                   ),
                   const SizedBox(
                     height: 30,
                   ),
-                  Text(
-                    portfolioDetails.bio,
-                    maxLines: 10,
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        shadows: [
-                          Shadow(color: Colors.yellow, blurRadius: 20),
-                        ]),
+                  oNeonText(
+                    maxLine: 10,
+                    text: portfolioDetails.bio,
+                    textSize: 30,
+                    blurRadius: 20,
+                    spreadColor: Colors.yellow,
                   ),
                 ],
               ),
@@ -170,14 +168,13 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      portfolioDetails.myName,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 74,
-                          shadows: [
-                            Shadow(color: color, blurRadius: 20),
-                          ]),
+                    oFlickerNeonText(
+                      flickerTimeInMilliSeconds: 1000,
+                      randomFlicker: true,
+                      text: portfolioDetails.myName,
+                      textSize: 74,
+                      blurRadius: 20,
+                      spreadColor: color,
                     ),
                     Container(
                       clipBehavior: Clip.none,
@@ -249,16 +246,12 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 40,
                     ),
-                    Text(
-                      portfolioDetails.bio,
-                      maxLines: 10,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          shadows: [
-                            Shadow(color: Colors.yellow, blurRadius: 10),
-                          ]),
+                    oNeonText(
+                      maxLine: 10,
+                      text: portfolioDetails.bio,
+                      textSize: 25,
+                      blurRadius: 10,
+                      spreadColor: Colors.yellow,
                     ),
                   ],
                 ),
