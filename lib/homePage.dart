@@ -49,7 +49,6 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
                     height: 30,
                   ),
                   oNeonText(
-                    maxLine: 10,
                     text: portfolioDetails.bio,
                     textSize: 30,
                     blurRadius: 20,
@@ -247,7 +246,6 @@ class homePageState extends State<homePage> with TickerProviderStateMixin {
                       height: 40,
                     ),
                     oNeonText(
-                      maxLine: 10,
                       text: portfolioDetails.bio,
                       textSize: 25,
                       blurRadius: 10,
