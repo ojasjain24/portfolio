@@ -1,10 +1,10 @@
-import 'package:portfolio/models/iconLinkModel.dart';
+import 'package:portfolio/models/icon_link_model.dart';
 
 class BuildsModel {
   String name;
   String assetImage;
   String description;
-  List<iconLinkModel>? links;
+  List<IconLinkModel>? links;
 
   BuildsModel({
     required this.description,

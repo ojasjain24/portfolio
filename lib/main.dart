@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'SplashScreen.dart';
+import 'splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: 'Ojas Jain',
       routes: {
-        '/': (ctx) => SplashScreen(),
+        '/': (ctx) => const SplashScreen(),
       },
       initialRoute: '/',
     );
