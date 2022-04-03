@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'models/iconLinkModel.dart';
+import 'models/icon_link_model.dart';
 
 Color descriptionColor = Colors.lime;
 Color nameColor = Colors.deepOrangeAccent;
@@ -12,7 +12,7 @@ Widget buildsCard(
     {required String assetImage,
     required String name,
     required String description,
-    required List<iconLinkModel>? links}) {
+    required List<IconLinkModel>? links}) {
   return oNeonContainer(
     clipBehaviour: Clip.antiAlias,
     lightSpreadRadius: 5,
@@ -44,7 +44,7 @@ Widget buildsCard(
               fit: BoxFit.fitWidth,
             )),
         Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             alignment: Alignment.centerLeft,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
