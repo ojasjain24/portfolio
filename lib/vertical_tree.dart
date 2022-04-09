@@ -152,18 +152,82 @@ List<Widget> widgetTreeVertical(size) {
               height: 30,
             ),
             Wrap(
-              spacing: 20,
-              runSpacing: 30,
+              runSpacing: 20,
+              spacing: 30,
+              alignment: WrapAlignment.start,
+              crossAxisAlignment: WrapCrossAlignment.start,
               children: [
                 ...(PortfolioDetails.experienceList
                     .map((e) => buildsCard(
-                        assetImage: e.assetImage,
-                        name: e.name,
-                        description: e.description,
-                        links: e.links))
+                          assetImage: e.assetImage,
+                          name: e.name,
+                          description: e.description,
+                          links: e.links,
+                        ))
                     .toList())
               ],
-            )
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: oNeonText(
+                text: "Ojas Works",
+                spreadColor: color,
+                textSize: 35,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: oNeonText(
+                text: "Tech",
+                spreadColor: color,
+                textSize: 25,
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Wrap(
+              runSpacing: 20,
+              spacing: 30,
+              alignment: WrapAlignment.start,
+              crossAxisAlignment: WrapCrossAlignment.start,
+              children: [
+                ...(PortfolioDetails.techWorksList
+                    .map((e) => worksCard(e))
+                    .toList())
+              ],
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: oNeonText(
+                text: "Lead",
+                spreadColor: color,
+                textSize: 25,
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Wrap(
+              runSpacing: 20,
+              spacing: 30,
+              alignment: WrapAlignment.start,
+              crossAxisAlignment: WrapCrossAlignment.start,
+              children: [
+                ...(PortfolioDetails.leadWorksList
+                    .map((e) => worksCard(e))
+                    .toList())
+              ],
+            ),
           ],
         ),
       ),

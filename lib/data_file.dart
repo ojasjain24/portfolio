@@ -1,6 +1,8 @@
 import 'package:portfolio/models/builds_model.dart';
 import 'package:portfolio/models/icon_link_model.dart';
 
+import 'models/WorksModel.dart';
+
 class PortfolioDetails {
   static String myName = "Ojas Jain";
   static String tagLine = "to Ojas' portfolio";
@@ -66,7 +68,97 @@ class PortfolioDetails {
             "Quick scanner is a QR code and Barcode scanner app for android devices which is very compact in terms of size. It saves scanned history in local storage which can be viewed and deleted in the app itself.",
         links: [
           IconLinkModel("assets/images/google-play.png",
-              "https://play.google.com/store/apps/details?id=com.Affix.qrcodescanner")
+              "https://play.google.com/store/apps/details?id=com.affix.qrcodescanner")
         ]),
+  ];
+
+  static List<WorksModel> techWorksList = [
+    WorksModel(
+      link: "https://www.linkedin.com/company/affixchat/",
+      companyName: "Affix",
+      endDate: "Current",
+      startDate: "July 2020",
+      title: "Founder",
+      logo: "assets/images/512.png",
+      description:
+          "Designed and developed multiple applications and games like “affix chat”, “quick scanner” and “Enigma Runner” for native android devices. Managed game projects in association with a private company.",
+    ),
+    WorksModel(
+      link:
+          "https://htic.iitm.ac.in/mti/project/smart-home-healthcare-solutions-pvt-ltd/",
+      companyName: "SHHS, IIT Madras",
+      endDate: "April 2022",
+      startDate: "January 2022",
+      title: "Flutter Developer intern",
+      description:
+          "Worked on client facing cross platform application on flutter in the healthcare technology domain.",
+    ),
+    // WorksModel(
+    //   link: "https://research.samsung.com/sri-b",
+    //   companyName: "Samsung PRISM",
+    //   endDate: "Feb 2022",
+    //   startDate: "July 2021",
+    //   title: "R&D intern",
+    //   logo: "assets/images/512.png",
+    //   description:
+    //   "This is a student program, where we worked on an ML based project at Samsung R&D bangalore.",
+    // ),
+    WorksModel(
+      link: "https://developersmonk.com/",
+      companyName: "Developers Monk",
+      endDate: "December 2021",
+      startDate: "October 2021",
+      title: "Flutter Developer",
+      description:
+          "Developed UI for a cross platform social media application using flutter and dart and integrated it with Javascript backend using APIs.",
+    ),
+
+    WorksModel(
+      link: "https://www.linkedin.com/company/e-city-vibes-pvt-ltd/",
+      companyName: "E-City Vibes",
+      endDate: "February 2021",
+      startDate: "May 2021",
+      title: "Mobile application developer intern",
+      description:
+          "Developed an Augmented Reality App for native android devices using AR Core, Android Studio, java and firebase.Developed an Employee Management App for native android devices using Android Studio, java and firebase.",
+    ),
+    WorksModel(
+      link: "https://dataasservices.com/",
+      companyName: "Data As Services",
+      endDate: "October 2020",
+      startDate: "January 2021",
+      title: "Junior android developer intern",
+      description:
+          "Worked on a travel and tourism app using android studio, java and firebase.",
+    ),
+    WorksModel(
+      link: "https://verzeo.com/",
+      companyName: "Verzeo",
+      endDate: "April 2020",
+      startDate: "May 2020",
+      title: "ML intern",
+      description:
+          "This was a course + internship where I first learned and then worked on Data Analysis and data Prediction using Machine Learning and Python.",
+    ),
+  ];
+  static List<WorksModel> leadWorksList = [
+    WorksModel(
+      link: "https://www.madiee.com/",
+      companyName: "Madiee games",
+      endDate: "January 2022",
+      startDate: "March 2022",
+      title: "product management Intern",
+      description:
+          "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
+    ),
+    WorksModel(
+      link: "https://www.linkedin.com/company/aim2excel/?originalSubdomain=in",
+      companyName: "Aim2Excel",
+      endDate: "January 2022",
+      startDate: "February 2022",
+      title: "Product Management Intern",
+      description:
+          "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
+    ),
   ];
 }
