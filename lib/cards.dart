@@ -4,13 +4,13 @@ import 'package:portfolio/appConstents.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'models/WorksModel.dart';
-import 'models/iconLinkModel.dart';
+import 'models/icon_link_model.dart';
 
 Widget buildsCard(
     {required String assetImage,
     required String name,
     required String description,
-    required List<iconLinkModel>? links}) {
+    required List<IconLinkModel>? links}) {
   return oNeonContainer(
     clipBehaviour: Clip.antiAlias,
     lightSpreadRadius: 4,

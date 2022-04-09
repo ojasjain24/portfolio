@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:portfolio/dataFile.dart';
+import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'Cards.dart';
+import 'cards.dart';
 
 Color color =
     Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
@@ -34,7 +34,7 @@ List<Widget> widgetTreeVertical(size) {
                 oFlickerNeonText(
                   flickerTimeInMilliSeconds: 1000,
                   randomFlicker: true,
-                  text: portfolioDetails.myName,
+                  text: PortfolioDetails.myName,
                   textSize: 74,
                   blurRadius: 20,
                   spreadColor: color,
@@ -65,7 +65,7 @@ List<Widget> widgetTreeVertical(size) {
                         child: ClipPath(
                           clipper: TriangleClipperVertical(),
                           child: Image.asset(
-                            portfolioDetails.profileImage,
+                            PortfolioDetails.profileImage,
                             fit: BoxFit.fitHeight,
                             height: size.width,
                             width: size.width * 0.9,
@@ -109,7 +109,7 @@ List<Widget> widgetTreeVertical(size) {
                   height: 40,
                 ),
                 oNeonText(
-                  text: portfolioDetails.bio,
+                  text: PortfolioDetails.bio,
                   textSize: 25,
                   blurRadius: 10,
                   spreadColor: Colors.green,
@@ -123,7 +123,7 @@ List<Widget> widgetTreeVertical(size) {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ...(portfolioDetails.socials.map(
+                ...(PortfolioDetails.socials.map(
                   (e) => InkWell(
                     onTap: () {
                       launch(e.link);
@@ -157,7 +157,7 @@ List<Widget> widgetTreeVertical(size) {
               alignment: WrapAlignment.start,
               crossAxisAlignment: WrapCrossAlignment.start,
               children: [
-                ...(portfolioDetails.experienceList
+                ...(PortfolioDetails.experienceList
                     .map((e) => buildsCard(
                           assetImage: e.assetImage,
                           name: e.name,
@@ -198,7 +198,7 @@ List<Widget> widgetTreeVertical(size) {
               alignment: WrapAlignment.start,
               crossAxisAlignment: WrapCrossAlignment.start,
               children: [
-                ...(portfolioDetails.techWorksList
+                ...(PortfolioDetails.techWorksList
                     .map((e) => worksCard(e))
                     .toList())
               ],
@@ -223,7 +223,7 @@ List<Widget> widgetTreeVertical(size) {
               alignment: WrapAlignment.start,
               crossAxisAlignment: WrapCrossAlignment.start,
               children: [
-                ...(portfolioDetails.leadWorksList
+                ...(PortfolioDetails.leadWorksList
                     .map((e) => worksCard(e))
                     .toList())
               ],

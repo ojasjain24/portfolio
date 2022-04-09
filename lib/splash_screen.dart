@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:portfolio/dataFile.dart';
+import 'package:portfolio/data_file.dart';
 
-import 'homePage.dart';
+import 'home_page.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return SplashScreenState();
@@ -18,10 +20,10 @@ class SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 0), () {
+    Timer(const Duration(milliseconds: 2000), () {
       Navigator.of(context)
           .push(
-            MaterialPageRoute(builder: (context) => homePage()),
+            MaterialPageRoute(builder: (context) => const HomePage()),
           )
           .then((value) => Navigator.of(context).pop());
     });
@@ -30,12 +32,12 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     late final AnimationController _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2))
+        AnimationController(vsync: this, duration: const Duration(seconds: 2))
           ..repeat();
 
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Column(
@@ -83,7 +85,7 @@ class SplashScreenState extends State<SplashScreen>
                         ),
                       );
                     },
-                    child: FlutterLogo(size: 200),
+                    child: const FlutterLogo(size: 200),
                   ),
                 ),
               ],
@@ -99,7 +101,7 @@ class SplashScreenState extends State<SplashScreen>
               height: 5,
             ),
             Text(
-              portfolioDetails.tagLine,
+              PortfolioDetails.tagLine,
               style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,

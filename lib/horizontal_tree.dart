@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:portfolio/dataFile.dart';
+import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'Cards.dart';
+import 'cards.dart';
 
 Color color =
     Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
@@ -14,7 +14,7 @@ List<Widget> widgetTreeHorizontal(size) {
   return [
     SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      child: Container(
+      child: SizedBox(
         width: size.width,
         child: Column(
           children: [
@@ -36,7 +36,7 @@ List<Widget> widgetTreeHorizontal(size) {
                           oFlickerNeonText(
                             flickerTimeInMilliSeconds: 1000,
                             randomFlicker: true,
-                            text: portfolioDetails.myName,
+                            text: PortfolioDetails.myName,
                             textSize: 96,
                             blurRadius: 40,
                             spreadColor: color,
@@ -45,7 +45,7 @@ List<Widget> widgetTreeHorizontal(size) {
                             height: 30,
                           ),
                           oNeonText(
-                            text: portfolioDetails.bio,
+                            text: PortfolioDetails.bio,
                             textSize: 30,
                             blurRadius: 20,
                             spreadColor: Colors.yellow,
@@ -54,7 +54,7 @@ List<Widget> widgetTreeHorizontal(size) {
                       ),
                       Row(
                         children: [
-                          ...(portfolioDetails.socials.map((e) => InkWell(
+                          ...(PortfolioDetails.socials.map((e) => InkWell(
                               onTap: () {
                                 launch(e.link);
                               },
@@ -94,7 +94,7 @@ List<Widget> widgetTreeHorizontal(size) {
                         child: ClipPath(
                           clipper: TriangleClipperHorizontal(),
                           child: Image.asset(
-                            portfolioDetails.profileImage,
+                            PortfolioDetails.profileImage,
                             fit: BoxFit.fitHeight,
                             height: size.height / 1.2,
                             width: size.width / 2,
@@ -144,7 +144,7 @@ List<Widget> widgetTreeHorizontal(size) {
               ],
             ),
             Container(
-              padding: EdgeInsets.all(40),
+              padding: const EdgeInsets.all(40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -168,7 +168,7 @@ List<Widget> widgetTreeHorizontal(size) {
                     alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.start,
                     children: [
-                      ...(portfolioDetails.experienceList
+                      ...(PortfolioDetails.experienceList
                           .map((e) => buildsCard(
                                 assetImage: e.assetImage,
                                 name: e.name,
@@ -209,7 +209,7 @@ List<Widget> widgetTreeHorizontal(size) {
                     alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.start,
                     children: [
-                      ...(portfolioDetails.techWorksList
+                      ...(PortfolioDetails.techWorksList
                           .map((e) => worksCard(e))
                           .toList())
                     ],
@@ -234,7 +234,7 @@ List<Widget> widgetTreeHorizontal(size) {
                     alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.start,
                     children: [
-                      ...(portfolioDetails.leadWorksList
+                      ...(PortfolioDetails.leadWorksList
                           .map((e) => worksCard(e))
                           .toList())
                     ],
