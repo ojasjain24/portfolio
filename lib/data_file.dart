@@ -70,6 +70,40 @@ class PortfolioDetails {
           IconLinkModel("assets/images/google-play.png",
               "https://play.google.com/store/apps/details?id=com.affix.qrcodescanner")
         ]),
+    BuildsModel(
+        assetImage: "assets/images/myPic.webp",
+        name: "Portfolio",
+        description:
+            "This is a website to provide a basic information about me, showcase my works and projects. This is a neon themed website built using flutter and uses the neon widgets.",
+        links: [
+          IconLinkModel(
+              "assets/images/link.png", "https://myportfolio-67882.web.app/#/")
+        ]),
+    BuildsModel(
+        assetImage: "assets/images/GyanShala.png",
+        name: "GyanShala app",
+        description:
+            "GyanShala is an e-learning platform for schools that aims to simplify distributing and grading, assignments and tests. This app allows teachers to create the subjects on app and provide live lectures, assignments and tests to the students, who in turn can submit their answer sheets and assignments in the same place.",
+        links: [
+          IconLinkModel("assets/images/github.png",
+              "https://github.com/ojasjain24/GyanShala")
+        ]),
+    BuildsModel(
+        name: "Group Chat App",
+        description:
+            "This software creates a temporary chat room, which allows only those users who are connected on the same network. which makes it useful for sharing information within a private network who wants to dispose of all the conversation after every use.",
+        links: [
+          IconLinkModel("assets/images/github.png",
+              "https://github.com/ojasjain24/chatApplicationPython")
+        ]),
+    BuildsModel(
+        name: "Students data analysis",
+        description:
+            "Exploratory data Analysis of a sample data of students in a institution. Used python and jupyter notebook to plot different types of graphs of various parameters.",
+        links: [
+          IconLinkModel("assets/images/github.png",
+              "https://github.com/ojasjain24/chatApplicationPython")
+        ]),
   ];
 
   static List<WorksModel> techWorksList = [
@@ -109,6 +143,7 @@ class PortfolioDetails {
       endDate: "December 2021",
       startDate: "October 2021",
       title: "Flutter Developer",
+      logo: "assets/images/devMonk.png",
       description:
           "Developed UI for a cross platform social media application using flutter and dart and integrated it with Javascript backend using APIs.",
     ),
@@ -116,6 +151,7 @@ class PortfolioDetails {
     WorksModel(
       link: "https://www.linkedin.com/company/e-city-vibes-pvt-ltd/",
       companyName: "E-City Vibes",
+      logo: "assets/images/ECV.png",
       endDate: "February 2021",
       startDate: "May 2021",
       title: "Mobile application developer intern",
@@ -127,6 +163,7 @@ class PortfolioDetails {
       companyName: "Data As Services",
       endDate: "October 2020",
       startDate: "January 2021",
+      logo: "assets/images/DAS.png",
       title: "Junior android developer intern",
       description:
           "Worked on a travel and tourism app using android studio, java and firebase.",
@@ -134,6 +171,7 @@ class PortfolioDetails {
     WorksModel(
       link: "https://verzeo.com/",
       companyName: "Verzeo",
+      logo: "assets/images/Verzeo.png",
       endDate: "April 2020",
       startDate: "May 2020",
       title: "ML intern",
@@ -144,6 +182,7 @@ class PortfolioDetails {
   static List<WorksModel> leadWorksList = [
     WorksModel(
       link: "https://www.madiee.com/",
+      logo: "assets/images/MADIEE.png",
       companyName: "Madiee games",
       endDate: "January 2022",
       startDate: "March 2022",
