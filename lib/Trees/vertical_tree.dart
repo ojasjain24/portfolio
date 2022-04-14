@@ -2,13 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
+import 'package:portfolio/Trees/Common.dart';
 import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'cards.dart';
-
-Color color =
-    Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+import '../appConstents.dart';
 
 List<Widget> widgetTreeVertical(size) {
   return [
@@ -37,7 +35,7 @@ List<Widget> widgetTreeVertical(size) {
                   text: PortfolioDetails.myName,
                   textSize: 74,
                   blurRadius: 20,
-                  spreadColor: color,
+                  spreadColor: MainSpreadColor,
                 ),
                 Container(
                   clipBehavior: Clip.none,
@@ -56,7 +54,7 @@ List<Widget> widgetTreeVertical(size) {
                           lineHeight: 3,
                           lightSpreadRadius: 2,
                           lightBlurRadius: 15,
-                          spreadColor: color,
+                          spreadColor: MainSpreadColor,
                         ),
                         clipBehavior: Clip.none,
                       ),
@@ -82,7 +80,7 @@ List<Widget> widgetTreeVertical(size) {
                           lineHeight: 3,
                           lightSpreadRadius: 5,
                           lightBlurRadius: 30,
-                          spreadColor: color,
+                          spreadColor: MainSpreadColor,
                           // spreadColor: Colors.green,
                         ),
                       ),
@@ -98,7 +96,7 @@ List<Widget> widgetTreeVertical(size) {
                           lineHeight: 3,
                           lightSpreadRadius: 5,
                           lightBlurRadius: 30,
-                          spreadColor: color,
+                          spreadColor: MainSpreadColor,
                           // spreadColor: Colors.green,
                         ),
                       ),
@@ -140,94 +138,7 @@ List<Widget> widgetTreeVertical(size) {
             const SizedBox(
               height: 40,
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: oNeonText(
-                text: "Ojas Builds",
-                spreadColor: color,
-                textSize: 35,
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Wrap(
-              runSpacing: 20,
-              spacing: 30,
-              alignment: WrapAlignment.start,
-              crossAxisAlignment: WrapCrossAlignment.start,
-              children: [
-                ...(PortfolioDetails.experienceList
-                    .map((e) => buildsCard(
-                          assetImage: e.assetImage,
-                          name: e.name,
-                          description: e.description,
-                          links: e.links,
-                        ))
-                    .toList())
-              ],
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: oNeonText(
-                text: "Ojas Works",
-                spreadColor: color,
-                textSize: 35,
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: oNeonText(
-                text: "Tech",
-                spreadColor: color,
-                textSize: 25,
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Wrap(
-              runSpacing: 20,
-              spacing: 30,
-              alignment: WrapAlignment.start,
-              crossAxisAlignment: WrapCrossAlignment.start,
-              children: [
-                ...(PortfolioDetails.techWorksList
-                    .map((e) => worksCard(e))
-                    .toList())
-              ],
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: oNeonText(
-                text: "Lead",
-                spreadColor: color,
-                textSize: 25,
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Wrap(
-              runSpacing: 20,
-              spacing: 30,
-              alignment: WrapAlignment.start,
-              crossAxisAlignment: WrapCrossAlignment.start,
-              children: [
-                ...(PortfolioDetails.leadWorksList
-                    .map((e) => worksCard(e))
-                    .toList())
-              ],
-            ),
+            WorksTree(padding: 0, screenSize: size),
           ],
         ),
       ),

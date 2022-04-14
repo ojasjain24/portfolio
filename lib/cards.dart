@@ -7,7 +7,7 @@ import 'models/WorksModel.dart';
 import 'models/icon_link_model.dart';
 
 Widget buildsCard(
-    {required String assetImage,
+    {String? assetImage,
     required String name,
     required String description,
     required List<IconLinkModel>? links}) {
@@ -37,7 +37,7 @@ Widget buildsCard(
               ),
             ),
             child: Image.asset(
-              assetImage,
+              assetImage ?? "assets/images/idea.png",
               width: 180,
               height: 180,
               fit: BoxFit.fitWidth,
@@ -67,6 +67,9 @@ Widget buildsCard(
                   spreadColor: CardDescriptionColor,
                   textSize: 15,
                 ),
+                const SizedBox(
+                  height: 5,
+                ),
                 Wrap(
                     alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.start,
@@ -92,14 +95,14 @@ Widget buildsCard(
   );
 }
 
-Widget worksCard(WorksModel worksModel) {
+Widget worksCard(WorksModel worksModel, Size screenSize, double parentPadding) {
   return InkWell(
     onTap: () {
       launch(worksModel.link ?? "");
     },
     child: oNeonContainer(
         width: 450,
-        height: 250,
+        height: 260,
         spreadColor: CardSpreadColor,
         padding: EdgeInsets.all(CardPadding),
         containerColor: Colors.black,
@@ -134,11 +137,23 @@ Widget worksCard(WorksModel worksModel) {
                     const SizedBox(
                       height: 2,
                     ),
-                    oNeonText(
-                      text: worksModel.title,
-                      spreadColor: CardTitleColor,
-                      fontWeight: FontWeight.w400,
-                      textSize: CardTitleFontSize - 5,
+                    SizedBox(
+                      width: screenSize.width < 450 + 2 * parentPadding
+                          ? screenSize.width -
+                              2 * CardPadding -
+                              2 * parentPadding -
+                              130
+                          : 300,
+                      child: oNeonText(
+                        textOverflow: TextOverflow.ellipsis,
+                        maxLine: 2,
+                        textAlign: TextAlign.start,
+                        text: worksModel.title,
+                        spreadColor: CardTitleColor,
+                        fontWeight: FontWeight.w400,
+                        textSize: CardTitleFontSize - 5,
+                        isSoftWrap: true,
+                      ),
                     ),
                     const SizedBox(
                       height: 2,
