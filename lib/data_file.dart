@@ -200,4 +200,19 @@ class PortfolioDetails {
           "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
     ),
   ];
+
+// static List<IconLinkModel> skillsList = [
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+//   IconLinkModel(
+//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+// ];
 }
