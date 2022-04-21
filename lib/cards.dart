@@ -59,8 +59,8 @@ class buildsCardState extends State<buildsCard> {
       onTap: () {},
       child: oNeonContainer(
         clipBehaviour: Clip.antiAlias,
-        lightSpreadRadius: 15,
-        lightBlurRadius: 45,
+        lightSpreadRadius: size.width > 850 ? 15 : 4,
+        lightBlurRadius: size.width > 850 ? 45 : 10,
         borderWidth: 3,
         borderRadius: BorderRadius.circular(CardRadius),
         containerColor: Colors.black,
@@ -215,8 +215,8 @@ class worksCardState extends State<worksCard> {
         containerColor: Colors.black,
         borderRadius: BorderRadius.circular(10),
         borderWidth: 3,
-        lightSpreadRadius: 10,
-        lightBlurRadius: 25,
+        lightSpreadRadius: size.width > 850 ? 10 : 4,
+        lightBlurRadius: size.width > 850 ? 25 : 10,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

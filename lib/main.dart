@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'appConstents.dart';
 import 'splash_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Ojas' Portfolio",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: primaryBlack,
       ),
       home: const MyHomePage(title: 'Portfolio'),
     );
