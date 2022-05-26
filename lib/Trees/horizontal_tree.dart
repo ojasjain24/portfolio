@@ -66,79 +66,7 @@ List<Widget> widgetTreeHorizontal(size) {
                     ],
                   ),
                 ),
-                Container(
-                  clipBehavior: Clip.none,
-                  height: size.height,
-                  width: size.width / 2,
-                  alignment: Alignment.bottomRight,
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      Container(
-                        clipBehavior: Clip.none,
-                        padding: EdgeInsets.fromLTRB(0, size.height / 3, 0, 0),
-                        alignment: Alignment.topCenter,
-                        child: oNeonLine(
-                          lineWidth: size.width / 2.5,
-                          lineHeight: 3,
-                          lightSpreadRadius: 10,
-                          lightBlurRadius: 60,
-                          spreadColor: MainSpreadColor,
-                        ),
-                      ),
-                      Container(
-                        alignment: Alignment.bottomRight,
-                        child: ClipPath(
-                          clipper: TriangleClipperHorizontal(),
-                          child: Image.asset(
-                            PortfolioDetails.profileImage,
-                            fit: BoxFit.fitHeight,
-                            height: size.height / 1.2,
-                            width: size.width / 2,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0, // size.height*5 /12,
-                        right: size.width / 4,
-                        child: oNeonLine(
-                          transformAlignment: Alignment.bottomRight,
-                          transform: Matrix4.rotationZ(atan(
-                            4.166 * (size.height / size.width),
-                          )),
-                          lineWidth: size.height /
-                              (1.2 *
-                                  sin(atan(3.33 * (size.height / size.width)))),
-                          lineHeight: 3,
-                          lightSpreadRadius: 10,
-                          lightBlurRadius: 60,
-                          spreadColor: MainSpreadColor,
-                          // spreadColor: Colors.green,
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0, // size.height*5 /12,
-                        right: size.width / 4,
-                        child: oNeonLine(
-                          transformAlignment: Alignment.bottomRight,
-                          transform: Matrix4.rotationZ(pi -
-                              atan(
-                                4.166 * (size.height / size.width),
-                              )),
-                          lineWidth: size.height /
-                              (1.2 *
-                                  sin(atan(3.33 * (size.height / size.width)))),
-                          lineHeight: 3,
-                          lightSpreadRadius: 10,
-                          lightBlurRadius: 60,
-                          spreadColor: MainSpreadColor,
-                          // spreadColor: Colors.green,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                mainImage(size: size),
               ],
             ),
             WorksTree(padding: 40, screenSize: size),
@@ -162,4 +90,112 @@ class TriangleClipperHorizontal extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(TriangleClipperHorizontal oldClipper) => false;
+}
+
+class mainImage extends StatefulWidget {
+  mainImage({required this.size});
+
+  Size size;
+
+  @override
+  State<StatefulWidget> createState() {
+    return mainImageState();
+  }
+}
+
+class mainImageState extends State<mainImage> {
+  @override
+  Widget build(BuildContext context) {
+    Color triangleColor = MainSpreadColor;
+
+    return Container(
+      clipBehavior: Clip.none,
+      height: widget.size.height,
+      width: widget.size.width / 2,
+      alignment: Alignment.bottomRight,
+      child: Stack(
+        clipBehavior: Clip.none,
+        alignment: Alignment.bottomCenter,
+        children: [
+          Container(
+            clipBehavior: Clip.none,
+            padding: EdgeInsets.fromLTRB(0, widget.size.height / 3, 0, 0),
+            alignment: Alignment.topCenter,
+            child: oNeonLine(
+              lineWidth: widget.size.width / 2.5,
+              lineHeight: 3,
+              lightSpreadRadius: 10,
+              lightBlurRadius: 60,
+              spreadColor: triangleColor,
+            ),
+          ),
+          Container(
+            alignment: Alignment.bottomRight,
+            child: ClipPath(
+              clipper: TriangleClipperHorizontal(),
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                onTap: () {
+                  setState(() {
+                    triangleColor =
+                        Color((Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(1.0);
+                    // print(triangleColor);
+                  });
+                },
+                child: Image.asset(
+                  PortfolioDetails.profileImage,
+                  fit: BoxFit.fitHeight,
+                  height: widget.size.height / 1.2,
+                  width: widget.size.width / 2,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0, // size.height*5 /12,
+            right: widget.size.width / 4,
+            child: oNeonLine(
+              transformAlignment: Alignment.bottomRight,
+              transform: Matrix4.rotationZ(atan(
+                4.166 * (widget.size.height / widget.size.width),
+              )),
+              lineWidth: widget.size.height /
+                  (1.2 *
+                      sin(atan(
+                          3.33 * (widget.size.height / widget.size.width)))),
+              lineHeight: 3,
+              lightSpreadRadius: 10,
+              lightBlurRadius: 60,
+              spreadColor: triangleColor,
+              // spreadColor: Colors.green,
+            ),
+          ),
+          Positioned(
+            bottom: 0, // size.height*5 /12,
+            right: widget.size.width / 4,
+            child: oNeonLine(
+              transformAlignment: Alignment.bottomRight,
+              transform: Matrix4.rotationZ(pi -
+                  atan(
+                    4.166 * (widget.size.height / widget.size.width),
+                  )),
+              lineWidth: widget.size.height /
+                  (1.2 *
+                      sin(atan(
+                          3.33 * (widget.size.height / widget.size.width)))),
+              lineHeight: 3,
+              lightSpreadRadius: 10,
+              lightBlurRadius: 60,
+              spreadColor: triangleColor,
+              // spreadColor: Colors.green,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
