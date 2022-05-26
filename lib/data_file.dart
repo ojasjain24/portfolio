@@ -71,7 +71,6 @@ class PortfolioDetails {
               "https://play.google.com/store/apps/details?id=com.affix.qrcodescanner")
         ]),
     BuildsModel(
-        assetImage: "assets/images/myPic.webp",
         name: "Portfolio",
         description:
             "This is a website to provide a basic information about me, showcase my works and projects. This is a neon themed website built using flutter and uses the neon widgets.",
@@ -102,15 +101,24 @@ class PortfolioDetails {
             "Exploratory data Analysis of a sample data of students in a institution. Used python and jupyter notebook to plot different types of graphs of various parameters.",
         links: [
           IconLinkModel("assets/images/github.png",
-              "https://github.com/ojasjain24/chatApplicationPython")
+              "https://github.com/ojasjain24/EDA/blob/master/MinorProject%20(3).ipynb")
         ]),
   ];
 
   static List<WorksModel> techWorksList = [
     WorksModel(
+      link: "https://iudx.org.in/",
+      logo: "assets/images/iudx-white.png",
+      companyName: "IUDX, IISc",
+      endDate: "Present",
+      startDate: "May 2022",
+      title: "Software development Intern",
+      description: "",
+    ),
+    WorksModel(
       link: "https://www.linkedin.com/company/affixchat/",
       companyName: "Affix",
-      endDate: "Current",
+      endDate: "Present",
       startDate: "July 2020",
       title: "Founder",
       logo: "assets/images/512.png",
@@ -201,18 +209,54 @@ class PortfolioDetails {
     ),
   ];
 
-// static List<IconLinkModel> skillsList = [
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-//   IconLinkModel(
-//       "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
-// ];
+  static List<IconLinkModel> skillsList = [
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg", ""),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg", ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+        ""),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg", ""),
+    // IconLinkModel(
+    //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+    //     ""),
+    IconLinkModel("https://www.vectorlogo.zone/logos/figma/figma-icon.svg", ""),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", ""),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg", ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+        ""),
+
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+        ""),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+        ""),
+  ];
 }

@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   neon_widgets: ^0.1.2
   url_launcher: ^6.0.20
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:
