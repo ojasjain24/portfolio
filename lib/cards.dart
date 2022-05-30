@@ -56,7 +56,9 @@ class buildsCardState extends State<buildsCard> {
           setState(() {});
         }
       },
-      onTap: () {},
+      onTap: () {
+        launch(widget.links![0].link);
+      },
       child: oNeonContainer(
         clipBehaviour: Clip.antiAlias,
         lightSpreadRadius: size.width > 850 ? 15 : 4,

@@ -73,7 +73,7 @@ List<Widget> widgetTreeHorizontal(size) {
           ],
         ),
       ),
-    )
+    ),
   ];
 }
 
@@ -102,6 +102,8 @@ class mainImage extends StatefulWidget {
     return mainImageState();
   }
 }
+
+//TODO change color of frame on tap.
 
 class mainImageState extends State<mainImage> {
   @override
