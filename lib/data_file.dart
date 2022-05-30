@@ -76,7 +76,9 @@ class PortfolioDetails {
             "This is a website to provide a basic information about me, showcase my works and projects. This is a neon themed website built using flutter and uses the neon widgets.",
         links: [
           IconLinkModel(
-              "assets/images/link.png", "https://myportfolio-67882.web.app/#/")
+              "assets/images/link.png", "https://myportfolio-67882.web.app/#/"),
+          IconLinkModel("assets/images/github.png",
+              "https://github.com/ojasjain24/portfolio"),
         ]),
     BuildsModel(
         assetImage: "assets/images/GyanShala.png",
@@ -160,8 +162,8 @@ class PortfolioDetails {
       link: "https://www.linkedin.com/company/e-city-vibes-pvt-ltd/",
       companyName: "E-City Vibes",
       logo: "assets/images/ECV.png",
-      endDate: "February 2021",
-      startDate: "May 2021",
+      endDate: "May 2021",
+      startDate: "February 2021",
       title: "Mobile application developer intern",
       description:
           "Developed an Augmented Reality App for native android devices using AR Core, Android Studio, java and firebase.Developed an Employee Management App for native android devices using Android Studio, java and firebase.",
@@ -169,8 +171,8 @@ class PortfolioDetails {
     WorksModel(
       link: "https://dataasservices.com/",
       companyName: "Data As Services",
-      endDate: "October 2020",
-      startDate: "January 2021",
+      endDate: "January 2021",
+      startDate: "October 2020",
       logo: "assets/images/DAS.png",
       title: "Junior android developer intern",
       description:
@@ -180,8 +182,8 @@ class PortfolioDetails {
       link: "https://verzeo.com/",
       companyName: "Verzeo",
       logo: "assets/images/Verzeo.png",
-      endDate: "April 2020",
-      startDate: "May 2020",
+      endDate: "May 2020",
+      startDate: "April 2020",
       title: "ML intern",
       description:
           "This was a course + internship where I first learned and then worked on Data Analysis and data Prediction using Machine Learning and Python.",
@@ -192,8 +194,8 @@ class PortfolioDetails {
       link: "https://www.madiee.com/",
       logo: "assets/images/MADIEE.png",
       companyName: "Madiee games",
-      endDate: "January 2022",
-      startDate: "March 2022",
+      endDate: "March 2022",
+      startDate: "January 2022",
       title: "product management Intern",
       description:
           "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
@@ -201,8 +203,8 @@ class PortfolioDetails {
     WorksModel(
       link: "https://www.linkedin.com/company/aim2excel/?originalSubdomain=in",
       companyName: "Aim2Excel",
-      endDate: "January 2022",
-      startDate: "February 2022",
+      endDate: "February 2022",
+      startDate: "January 2022",
       title: "Product Management Intern",
       description:
           "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
