@@ -6,6 +6,7 @@ class WorksModel {
   String startDate;
   String endDate;
   String? link;
+  bool isCurrent;
 
   WorksModel({
     this.description,
@@ -15,5 +16,6 @@ class WorksModel {
     this.link,
     required this.startDate,
     required this.title,
+    this.isCurrent = false,
   });
 }
