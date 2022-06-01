@@ -31,6 +31,9 @@ List<Widget> widgetTreeHorizontal(size) {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          const SizedBox(
+                            height: 100,
+                          ),
                           oFlickerNeonText(
                             flickerTimeInMilliSeconds: 1000,
                             randomFlicker: true,
@@ -40,13 +43,14 @@ List<Widget> widgetTreeHorizontal(size) {
                             spreadColor: MainSpreadColor,
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 50,
                           ),
                           oNeonText(
                             text: PortfolioDetails.bio,
-                            textSize: 30,
+                            textSize: 35,
                             blurRadius: 20,
-                            spreadColor: Colors.yellow,
+                            spreadColor: Colors.deepPurple,
+                            textAlign: TextAlign.justify,
                           ),
                         ],
                       ),
@@ -66,7 +70,7 @@ List<Widget> widgetTreeHorizontal(size) {
                     ],
                   ),
                 ),
-                mainImage(size: size),
+                mainImage(size: Size(0.95*size.width, 0.95*size.height)),
               ],
             ),
             WorksTree(padding: 40, screenSize: size),

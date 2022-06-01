@@ -1,7 +1,10 @@
+import 'dart:core';
+
 import 'package:portfolio/models/builds_model.dart';
 import 'package:portfolio/models/icon_link_model.dart';
 
 import 'models/WorksModel.dart';
+import 'models/education_model.dart';
 
 class PortfolioDetails {
   static String myName = "Ojas Jain";
@@ -116,6 +119,7 @@ class PortfolioDetails {
       startDate: "May 2022",
       title: "Software development Intern",
       description: "",
+      isCurrent: true,
     ),
     WorksModel(
       link: "https://www.linkedin.com/company/affixchat/",
@@ -126,6 +130,7 @@ class PortfolioDetails {
       logo: "assets/images/512.png",
       description:
           "Designed and developed multiple applications and games like “affix chat”, “quick scanner” and “Enigma Runner” for native android devices. Managed game projects in association with a private company.",
+      isCurrent: true,
     ),
     WorksModel(
       link:
@@ -260,5 +265,23 @@ class PortfolioDetails {
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
         ""),
+  ];
+
+  static List<InstituteModel> educationList = [
+    InstituteModel(
+        name: "IIIT Kurnool",
+        timeline: "2019-2023",
+        degrees: [
+          DegreeModel(degree: "B.Tech", level: "Mechanical", score: "7.9CGPA"),
+        ],
+        logo: "assets/images/iiitdmkl.png"),
+    InstituteModel(
+        name: "SICA",
+        timeline: "Till 2019",
+        degrees: [
+          DegreeModel(degree: "12th", level: "CBSE", score: "83.2%"),
+          DegreeModel(degree: "10th", level: "CBSE", score: "8.6CGPA"),
+        ],
+        logo: "assets/images/sica.png")
   ];
 }

@@ -5,11 +5,13 @@ class BuildsModel {
   String? assetImage;
   String description;
   List<IconLinkModel>? links;
+  bool isCurrent;
 
   BuildsModel({
     required this.description,
     this.assetImage,
     required this.name,
     this.links,
+    this.isCurrent = false,
   });
 }

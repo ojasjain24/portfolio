@@ -20,7 +20,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           child: oNeonText(
             text: "Ojas' Magic Tools",
             spreadColor: MainSpreadColor,
-            textSize: 35,
+            textSize: HeadingFontSize,
           ),
         ),
         const SizedBox(
@@ -49,7 +49,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           child: oNeonText(
             text: "Ojas' Builds",
             spreadColor: MainSpreadColor,
-            textSize: 35,
+            textSize: HeadingFontSize,
           ),
         ),
         const SizedBox(
@@ -67,6 +67,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
                       name: e.name,
                       description: e.description,
                       links: e.links,
+                      isCurrent: e.isCurrent,
                     ))
                 .toList())
           ],
@@ -79,7 +80,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           child: oNeonText(
             text: "Ojas Works on Tech",
             spreadColor: MainSpreadColor,
-            textSize: 35,
+            textSize: HeadingFontSize,
           ),
         ),
         const SizedBox(
@@ -108,7 +109,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           child: oNeonText(
             text: "Ojas Leads",
             spreadColor: MainSpreadColor,
-            textSize: 35,
+            textSize: HeadingFontSize,
           ),
         ),
         const SizedBox(
@@ -130,6 +131,35 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
                 )
                 .toList())
           ],
+        ),
+        const SizedBox(
+          height: 40,
+        ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: oNeonText(
+            text: "Ojas' Education",
+            spreadColor: MainSpreadColor,
+            textSize: HeadingFontSize,
+          ),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        SingleChildScrollView(
+          padding: EdgeInsets.all(10),
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              ...(PortfolioDetails.educationList
+                  .map(
+                    (e) => educationCard(
+                      model: e,
+                    ),
+                  )
+                  .toList())
+            ],
+          ),
         ),
       ],
     ),

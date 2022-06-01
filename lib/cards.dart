@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:portfolio/appConstents.dart';
+import 'package:portfolio/models/education_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'models/WorksModel.dart';
 import 'models/icon_link_model.dart';
 
 class buildsCard extends StatefulWidget {
-  buildsCard(
-      {this.assetImage,
-      required this.name,
-      required this.description,
-      required this.links});
+  buildsCard({
+    this.assetImage,
+    required this.name,
+    required this.description,
+    required this.links,
+    this.isCurrent = false,
+  });
 
   String? assetImage;
   String name;
   String description;
   List<IconLinkModel>? links;
+  bool isCurrent;
 
   @override
   State<StatefulWidget> createState() {
@@ -36,7 +40,7 @@ class buildsCardState extends State<buildsCard> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     if (size.width <= 850) {
-      spreadColor = CardSpreadColor;
+      spreadColor = widget.isCurrent ? CardSpreadCurrentColor : CardSpreadColor;
       borderColor = Colors.white;
       titleSpreadColor = CardTitleColor;
       titleTextColor = Colors.white;
@@ -47,7 +51,11 @@ class buildsCardState extends State<buildsCard> {
     return InkWell(
       onHover: (state) {
         if (size.width > 850) {
-          spreadColor = state ? CardSpreadColor : Colors.transparent;
+          spreadColor = state
+              ? widget.isCurrent
+                  ? CardSpreadCurrentColor
+                  : CardSpreadColor
+              : Colors.transparent;
           borderColor = state ? Colors.white : Colors.white54;
           titleSpreadColor = state ? CardTitleColor : Colors.transparent;
           titleTextColor = state ? Colors.white : Colors.white54;
@@ -158,10 +166,11 @@ class buildsCardState extends State<buildsCard> {
 }
 
 class worksCard extends StatefulWidget {
-  worksCard(
-      {required this.worksModel,
-      required this.screenSize,
-      required this.parentPadding});
+  worksCard({
+    required this.worksModel,
+    required this.screenSize,
+    required this.parentPadding,
+  });
 
   WorksModel worksModel;
   Size screenSize;
@@ -185,7 +194,9 @@ class worksCardState extends State<worksCard> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     if (size.width <= 850) {
-      spreadColor = CardSpreadColor;
+      spreadColor = widget.worksModel.isCurrent
+          ? CardSpreadCurrentColor
+          : CardSpreadColor;
       borderColor = Colors.white;
       titleSpreadColor = CardTitleColor;
       titleTextColor = Colors.white;
@@ -196,7 +207,11 @@ class worksCardState extends State<worksCard> {
     return InkWell(
       onHover: (state) {
         if (size.width > 850) {
-          spreadColor = state ? CardSpreadColor : Colors.transparent;
+          spreadColor = state
+              ? widget.worksModel.isCurrent
+                  ? CardSpreadCurrentColor
+                  : CardSpreadColor
+              : Colors.transparent;
           borderColor = state ? Colors.white : Colors.white54;
           titleSpreadColor = state ? CardTitleColor : Colors.transparent;
           titleTextColor = state ? Colors.white : Colors.white54;
@@ -296,6 +311,160 @@ class worksCardState extends State<worksCard> {
               textSize: CardDescriptionFontSize,
               blurRadius: 10,
             )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class educationCard extends StatefulWidget {
+  educationCard({
+    required this.model,
+  });
+
+  InstituteModel model;
+
+  @override
+  State<StatefulWidget> createState() {
+    return educationCardState();
+  }
+}
+
+class educationCardState extends State<educationCard> {
+  Color spreadColor = Colors.transparent;
+  Color borderColor = Colors.white54;
+  Color titleSpreadColor = Colors.transparent;
+  Color titleTextColor = Colors.white54;
+  Color discpSpreadColor = Colors.transparent;
+  Color discpTextColor = Colors.white54;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    if (size.width <= 850) {
+      spreadColor =
+          widget.model.isCurrent ? CardSpreadCurrentColor : CardSpreadColor;
+      borderColor = Colors.white;
+      titleSpreadColor = CardTitleColor;
+      titleTextColor = Colors.white;
+      discpSpreadColor = CardDescriptionColor;
+      discpTextColor = Colors.white;
+      setState(() {});
+    }
+    return InkWell(
+      onHover: (state) {
+        if (size.width > 850) {
+          spreadColor = state
+              ? widget.model.isCurrent
+                  ? CardSpreadCurrentColor
+                  : CardSpreadColor
+              : Colors.transparent;
+          borderColor = state ? Colors.white : Colors.white54;
+          titleSpreadColor = state ? CardTitleColor : Colors.transparent;
+          titleTextColor = state ? Colors.white : Colors.white54;
+          discpSpreadColor = state ? CardDescriptionColor : Colors.transparent;
+          discpTextColor = state ? Colors.white : Colors.white54;
+          setState(() {});
+        }
+      },
+      onTap: () {},
+      child: oNeonContainer(
+        lightSpreadRadius: size.width > 850 ? 15 : 4,
+        lightBlurRadius: size.width > 850 ? 45 : 10,
+        spreadColor: spreadColor,
+        borderColor: borderColor,
+        height: 205,
+        margin: const EdgeInsets.all(10),
+        borderWidth: 2,
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(300),
+          bottomRight: Radius.circular(300),
+          bottomLeft: Radius.circular(1000),
+          topLeft: Radius.circular(1000),
+        ),
+        containerColor: Colors.black87,
+        child: Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(1000),
+                color: borderColor,
+              ),
+              child: Image.network(
+                widget.model.logo,
+                width: 160,
+                height: 160,
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.model.name,
+                    style: TextStyle(
+                        fontSize: 45,
+                        color: borderColor,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    widget.model.timeline,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white60,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ...(widget.model.degrees!.map((e) => Wrap(
+                            children: [
+                              Text(e.degree,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                      fontSize: 30)),
+                              const Text(
+                                " | ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                    color: Colors.white70),
+                              ),
+                              Text(e.level,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      color: Colors.white70,
+                                      fontSize: 30)),
+                              const Text(
+                                " | ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                    color: Colors.white70),
+                              ),
+                              Text(e.score,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      color: Colors.white54,
+                                      fontSize: 30)),
+                            ],
+                          ))),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
