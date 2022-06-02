@@ -414,7 +414,7 @@ class educationCardState extends State<educationCard> {
                 borderRadius: BorderRadius.circular(1000),
                 color: borderColor,
               ),
-              child: Image.network(
+              child: Image.asset(
                 widget.model.logo,
                 width: size.width > 850 ? 160 : 110,
                 height: size.width > 850 ? 160 : 110,
@@ -572,7 +572,7 @@ class certificateCardState extends State<certificateCard> {
                 borderRadius: BorderRadius.circular(1000),
                 color: borderColor,
               ),
-              child: Image.network(
+              child: Image.asset(
                 widget.model.logo,
                 width: size.width > 850 ? 100 : 70,
                 height: size.width > 850 ? 100 : 70,
