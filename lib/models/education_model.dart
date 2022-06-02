@@ -4,6 +4,7 @@ class InstituteModel {
   List<DegreeModel>? degrees;
   String logo;
   bool isCurrent;
+  String link;
 
   InstituteModel({
     required this.name,
@@ -11,6 +12,7 @@ class InstituteModel {
     required this.degrees,
     this.logo = "assets/images/office-building.png",
     this.isCurrent = false,
+    this.link = "",
   });
 }
 

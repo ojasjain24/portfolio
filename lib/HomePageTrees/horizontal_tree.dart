@@ -2,59 +2,61 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:portfolio/Trees/Common.dart';
+import 'package:portfolio/HomePageTrees/Common.dart';
 import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../appConstents.dart';
 
-List<Widget> widgetTreeHorizontal(size) {
-  return [
-    SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: SizedBox(
-        width: size.width,
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  clipBehavior: Clip.none,
-                  padding: const EdgeInsets.all(40),
-                  height: size.height,
-                  alignment: Alignment.center,
-                  width: size.width / 2,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(
-                            height: 100,
-                          ),
-                          oFlickerNeonText(
-                            flickerTimeInMilliSeconds: 1000,
-                            randomFlicker: true,
-                            text: PortfolioDetails.myName,
-                            textSize: 96,
-                            blurRadius: 40,
-                            spreadColor: MainSpreadColor,
-                          ),
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          oNeonText(
-                            text: PortfolioDetails.bio,
-                            textSize: 35,
-                            blurRadius: 20,
-                            spreadColor: Colors.deepPurple,
-                            textAlign: TextAlign.justify,
-                          ),
-                        ],
-                      ),
-                      Row(
+Widget widgetTreeHorizontal(size) {
+  return SingleChildScrollView(
+    scrollDirection: Axis.vertical,
+    child: SizedBox(
+      width: size.width,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                clipBehavior: Clip.none,
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                height: size.height,
+                alignment: Alignment.center,
+                width: size.width / 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 40,
+                        ),
+                        oFlickerNeonText(
+                          flickerTimeInMilliSeconds: 1000,
+                          randomFlicker: true,
+                          text: PortfolioDetails.myName,
+                          textSize: (96),
+                          blurRadius: 40,
+                          spreadColor: MainSpreadColor,
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        oNeonText(
+                          text: PortfolioDetails.bio,
+                          textSize: 30,
+                          blurRadius: 20,
+                          spreadColor: Colors.deepPurple,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ],
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Row(
                         children: [
                           ...(PortfolioDetails.socials.map((e) => InkWell(
                               onTap: () {
@@ -66,19 +68,22 @@ List<Widget> widgetTreeHorizontal(size) {
                                 width: 50,
                               )))),
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
-                mainImage(size: Size(0.95*size.width, 0.95*size.height)),
-              ],
-            ),
-            WorksTree(padding: 40, screenSize: size),
-          ],
-        ),
+              ),
+              mainImage(size: Size(0.95 * size.width, 0.95 * size.height)),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          WorksTree(padding: 40, screenSize: size),
+        ],
       ),
     ),
-  ];
+  );
 }
 
 class TriangleClipperHorizontal extends CustomClipper<Path> {
@@ -112,8 +117,8 @@ class mainImage extends StatefulWidget {
 class mainImageState extends State<mainImage> {
   @override
   Widget build(BuildContext context) {
-    Color triangleColor = MainSpreadColor;
-
+    Color triangleColor =
+        Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
     return Container(
       clipBehavior: Clip.none,
       height: widget.size.height,
@@ -146,10 +151,9 @@ class mainImageState extends State<mainImage> {
                 hoverColor: Colors.transparent,
                 onTap: () {
                   setState(() {
+                    // triangleColor = Colors.primaries[Random().nextInt(Colors.primaries.length)];
                     triangleColor =
-                        Color((Random().nextDouble() * 0xFFFFFF).toInt())
-                            .withOpacity(1.0);
-                    // print(triangleColor);
+                        Color((Random().nextInt(0xFFFFFF))).withOpacity(0.8);
                   });
                 },
                 child: Image.asset(
@@ -200,6 +204,14 @@ class mainImageState extends State<mainImage> {
               // spreadColor: Colors.green,
             ),
           ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Image.asset(
+              "assets/images/click-here.png",
+              height: 200,
+              width: 200,
+            ),
+          )
         ],
       ),
     );

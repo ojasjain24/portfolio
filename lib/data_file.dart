@@ -113,7 +113,7 @@ class PortfolioDetails {
   static List<WorksModel> techWorksList = [
     WorksModel(
       link: "https://iudx.org.in/",
-      logo: "assets/images/iudx-white.png",
+      logo: "assets/images/iudx.png",
       companyName: "IUDX, IISc",
       endDate: "Present",
       startDate: "May 2022",
@@ -206,13 +206,14 @@ class PortfolioDetails {
           "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
     ),
     WorksModel(
+      logo: "assets/images/aim2excel.png",
       link: "https://www.linkedin.com/company/aim2excel/?originalSubdomain=in",
       companyName: "Aim2Excel",
       endDate: "February 2022",
       startDate: "January 2022",
       title: "Product Management Intern",
       description:
-          "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
+          "Done research on various products and their features. Created product requirement documentations, basic roadmaps and wireframes for multiple products.",
     ),
   ];
 
@@ -274,14 +275,121 @@ class PortfolioDetails {
         degrees: [
           DegreeModel(degree: "B.Tech", level: "Mechanical", score: "7.9CGPA"),
         ],
-        logo: "assets/images/iiitdmkl.png"),
+        logo: "assets/images/iiitdmkl.png",
+        isCurrent: true),
+    // InstituteModel(
+    //     name: "SICA",
+    //     timeline: "Till 2019",
+    //     degrees: [
+    //       DegreeModel(degree: "12th", level: "CBSE", score: "83.2%"),
+    //       DegreeModel(degree: "10th", level: "CBSE", score: "8.6CGPA"),
+    //     ],
+    //     logo: "assets/images/sica.png")
+  ];
+
+  static List<InstituteModel> certificateList = [
     InstituteModel(
-        name: "SICA",
-        timeline: "Till 2019",
+        name: "Product Design and Manufacturing",
+        timeline: "",
         degrees: [
-          DegreeModel(degree: "12th", level: "CBSE", score: "83.2%"),
-          DegreeModel(degree: "10th", level: "CBSE", score: "8.6CGPA"),
+          DegreeModel(degree: "NPTEL", level: "IIT Kanpur", score: ""),
         ],
-        logo: "assets/images/sica.png")
+        logo: "assets/images/nptel_logo.png",
+        link:
+            "https://drive.google.com/file/d/18lSk22s3aQSVCe72kseAlrbYb00JWFO_/view?usp=sharing"),
+    InstituteModel(
+        name: "Operations Management",
+        timeline: "",
+        degrees: [
+          DegreeModel(degree: "NPTEL", level: "IIT Roorkee", score: ""),
+        ],
+        logo: "assets/images/nptel_logo.png",
+        link:
+            "https://drive.google.com/file/d/1iR0rdF00OHZideF_R47WTiNYLyuJrHsz/view?usp=sharing"),
+    InstituteModel(
+        name: "Machine Learning",
+        timeline: "",
+        degrees: [
+          DegreeModel(degree: "Verzeo", level: "", score: ""),
+        ],
+        logo: "assets/images/Verzeo.png",
+        link:
+            "https://drive.google.com/file/d/1LnnCa_fs4Hv5aPbUO614u5BYWMmfz1wa/view?usp=sharing"),
+    InstituteModel(
+        name: "Create and Manage Cloud Resources",
+        timeline: "",
+        degrees: [
+          DegreeModel(degree: "Google Cloud", level: "", score: ""),
+        ],
+        logo: "assets/images/gcp_logo.png",
+        link:
+            "https://www.cloudskillsboost.google/public_profiles/b312a02e-07e3-4fa7-a4a8-b3b03dec2fcf/badges/1443194?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"),
+  ];
+
+  static List<InstituteModel> eventCertificateList = [
+    InstituteModel(
+        name: "GDC 'I-NCUBATE' Cohort 16",
+        timeline: "",
+        degrees: [
+          DegreeModel(degree: "GDC", level: "IIT Madras", score: ""),
+        ],
+        logo: "assets/images/gdc-logo.png",
+        link:
+            "https://drive.google.com/file/d/1qZ1qkd17xpEwKtMv_QO8GqhJDewbC_XB/view?usp=sharing"),
+  ];
+
+  static List<WorksModel> volunteerWorksList = [
+    WorksModel(
+      link:
+          "https://gdsc.community.dev/indian-institute-of-information-technology-design-manufacturing-kurnool/",
+      logo: "assets/images/GDSC.png",
+      companyName: "Google Developer students club",
+      endDate: "Current",
+      startDate: "October 2021",
+      title: "Android lead",
+      description:
+          "Organized multiple events and sessions. Given multiple talks and took sessions on flutter. I was also the flutter festival facilitator for the year 2022",
+    ),
+    WorksModel(
+      link:
+          "https://gdsc.community.dev/indian-institute-of-information-technology-design-manufacturing-kurnool/",
+      logo: "assets/images/GDSC.png",
+      companyName: "Google Developer students club",
+      endDate: "October 2021",
+      startDate: "October 2020",
+      title: "product design team",
+      description:
+          "Was part of product design team and had developed multiple product concepts and ideas and had built the wireframes and implementation strategies for the same",
+    ),
+    WorksModel(
+      link: "https://iiitk.ac.in/",
+      logo: "assets/images/iiitdmkl.png",
+      companyName: "Placement cell",
+      endDate: "Current",
+      startDate: "January 2022",
+      title: "Coordinator",
+      description:
+          "Part of the placement cell team of Indian Institute of Information Technology Design and Manufacturing (IIITDM Kurnool) in the year 2022.",
+    ),
+    WorksModel(
+      link: "https://iiitk.ac.in/",
+      logo: "assets/images/iiitdmkl.png",
+      companyName: "Photography club",
+      endDate: "Current",
+      startDate: "July 2021",
+      title: "Coordinator",
+      description:
+          "Conducted multiple sessions and talks on photography and different techniques of photography. Learned to operate DSLR and was the cameraman in multiple collage events.",
+    ),
+    WorksModel(
+      link: "https://iiitk.ac.in/",
+      logo: "assets/images/iiitdmkl.png",
+      companyName: "Solasta 2k20",
+      endDate: "March 2020",
+      startDate: "January 2020",
+      title: "Marketing team member",
+      description:
+          "Was member of Solasta's marketing team. Solasta is the annual techno-cultural fest of IIIT Kurnool. Bought sponsors for the event and helped in the coordination",
+    ),
   ];
 }
