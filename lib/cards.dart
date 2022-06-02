@@ -76,7 +76,7 @@ class buildsCardState extends State<buildsCard> {
         containerColor: Colors.black,
         spreadColor: spreadColor,
         borderColor: borderColor,
-        width: 450,
+        width: 440,
         height: 410,
         padding: const EdgeInsets.only(
           left: 10,
@@ -224,7 +224,7 @@ class worksCardState extends State<worksCard> {
         launch(widget.worksModel.link ?? "");
       },
       child: oNeonContainer(
-        width: 450,
+        width: 455,
         height: 260,
         spreadColor: spreadColor,
         borderColor: borderColor,
@@ -240,10 +240,18 @@ class worksCardState extends State<worksCard> {
           children: [
             Row(
               children: [
-                Image.asset(
-                  widget.worksModel.logo ?? "assets/images/office-building.png",
-                  width: 65,
-                  height: 65,
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(1000),
+                    color: borderColor,
+                  ),
+                  child: Image.asset(
+                    widget.worksModel.logo ??
+                        "assets/images/office-building.png",
+                    width: 65,
+                    height: 65,
+                  ),
                 ),
                 const SizedBox(
                   width: 20,
@@ -252,12 +260,19 @@ class worksCardState extends State<worksCard> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    oNeonText(
-                      text: widget.worksModel.companyName,
-                      fontWeight: FontWeight.bold,
-                      spreadColor: titleSpreadColor,
-                      textSize: CardTitleFontSize,
-                      textColor: titleTextColor,
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      width: 300,
+                      child: oNeonText(
+                        textAlign: TextAlign.start,
+                        text: widget.worksModel.companyName,
+                        fontWeight: FontWeight.bold,
+                        spreadColor: titleSpreadColor,
+                        textSize: CardTitleFontSize,
+                        textColor: titleTextColor,
+                        isSoftWrap: true,
+                        maxLine: 2,
+                      ),
                     ),
                     const SizedBox(
                       height: 2,
@@ -270,16 +285,20 @@ class worksCardState extends State<worksCard> {
                               2 * widget.parentPadding -
                               130
                           : 300,
-                      child: oNeonText(
-                        textOverflow: TextOverflow.ellipsis,
-                        maxLine: 2,
-                        textAlign: TextAlign.start,
-                        text: widget.worksModel.title,
-                        spreadColor: discpSpreadColor,
-                        textColor: discpTextColor,
-                        fontWeight: FontWeight.w400,
-                        textSize: CardTitleFontSize - 5,
-                        isSoftWrap: true,
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        width: 300,
+                        child: oNeonText(
+                          textOverflow: TextOverflow.ellipsis,
+                          maxLine: 2,
+                          textAlign: TextAlign.start,
+                          text: widget.worksModel.title,
+                          spreadColor: discpSpreadColor,
+                          textColor: discpTextColor,
+                          fontWeight: FontWeight.w400,
+                          textSize: CardTitleFontSize - 6,
+                          isSoftWrap: true,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -368,13 +387,15 @@ class educationCardState extends State<educationCard> {
           setState(() {});
         }
       },
-      onTap: () {},
+      onTap: () {
+        widget.model.link != "" ? launch(widget.model.link) : null;
+      },
       child: oNeonContainer(
         lightSpreadRadius: size.width > 850 ? 15 : 4,
         lightBlurRadius: size.width > 850 ? 45 : 10,
         spreadColor: spreadColor,
         borderColor: borderColor,
-        height: 205,
+        height: size.width > 850 ? 205 : 160,
         margin: const EdgeInsets.all(10),
         borderWidth: 2,
         borderRadius: const BorderRadius.only(
@@ -395,8 +416,8 @@ class educationCardState extends State<educationCard> {
               ),
               child: Image.network(
                 widget.model.logo,
-                width: 160,
-                height: 160,
+                width: size.width > 850 ? 160 : 110,
+                height: size.width > 850 ? 160 : 110,
               ),
             ),
             Container(
@@ -407,7 +428,7 @@ class educationCardState extends State<educationCard> {
                   Text(
                     widget.model.name,
                     style: TextStyle(
-                        fontSize: 45,
+                        fontSize: size.width > 850 ? 45 : 30,
                         color: borderColor,
                         fontWeight: FontWeight.w700),
                   ),
@@ -416,8 +437,8 @@ class educationCardState extends State<educationCard> {
                   ),
                   Text(
                     widget.model.timeline,
-                    style: const TextStyle(
-                        fontSize: 20,
+                    style: TextStyle(
+                        fontSize: size.width > 850 ? 20 : 15,
                         color: Colors.white60,
                         fontWeight: FontWeight.w300),
                   ),
@@ -430,34 +451,176 @@ class educationCardState extends State<educationCard> {
                       ...(widget.model.degrees!.map((e) => Wrap(
                             children: [
                               Text(e.degree,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.blue,
-                                      fontSize: 30)),
-                              const Text(
+                                      fontSize: size.width > 850 ? 30 : 20)),
+                              Text(
                                 " | ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 30,
+                                    fontSize: size.width > 850 ? 30 : 20,
                                     color: Colors.white70),
                               ),
                               Text(e.level,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.white70,
-                                      fontSize: 30)),
-                              const Text(
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.white70,
+                                    fontSize: size.width > 850 ? 30 : 20,
+                                  )),
+                              Text(
                                 " | ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 30,
+                                    fontSize: size.width > 850 ? 30 : 20,
                                     color: Colors.white70),
                               ),
                               Text(e.score,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white54,
-                                      fontSize: 30)),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white54,
+                                    fontSize: size.width > 850 ? 30 : 20,
+                                  )),
+                            ],
+                          ))),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class certificateCard extends StatefulWidget {
+  certificateCard({
+    required this.model,
+  });
+
+  InstituteModel model;
+
+  @override
+  State<StatefulWidget> createState() {
+    return certificateCardState();
+  }
+}
+
+class certificateCardState extends State<certificateCard> {
+  Color spreadColor = Colors.transparent;
+  Color borderColor = Colors.white54;
+  Color titleSpreadColor = Colors.transparent;
+  Color titleTextColor = Colors.white54;
+  Color discpSpreadColor = Colors.transparent;
+  Color discpTextColor = Colors.white54;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    if (size.width <= 850) {
+      spreadColor =
+          widget.model.isCurrent ? CardSpreadCurrentColor : CardSpreadColor;
+      borderColor = Colors.white;
+      titleSpreadColor = CardTitleColor;
+      titleTextColor = Colors.white;
+      discpSpreadColor = CardDescriptionColor;
+      discpTextColor = Colors.white;
+      setState(() {});
+    }
+    return InkWell(
+      onHover: (state) {
+        if (size.width > 850) {
+          spreadColor = state
+              ? widget.model.isCurrent
+                  ? CardSpreadCurrentColor
+                  : CardSpreadColor
+              : Colors.transparent;
+          borderColor = state ? Colors.white : Colors.white54;
+          titleSpreadColor = state ? CardTitleColor : Colors.transparent;
+          titleTextColor = state ? Colors.white : Colors.white54;
+          discpSpreadColor = state ? CardDescriptionColor : Colors.transparent;
+          discpTextColor = state ? Colors.white : Colors.white54;
+          setState(() {});
+        }
+      },
+      onTap: () {
+        launch(widget.model.link);
+      },
+      child: oNeonContainer(
+        lightSpreadRadius: size.width > 850 ? 15 : 4,
+        lightBlurRadius: size.width > 850 ? 45 : 10,
+        spreadColor: spreadColor,
+        borderColor: borderColor,
+        height: size.width > 850 ? 150 : 120,
+        margin: const EdgeInsets.all(10),
+        borderWidth: 2,
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(300),
+          bottomRight: Radius.circular(300),
+          bottomLeft: Radius.circular(1000),
+          topLeft: Radius.circular(1000),
+        ),
+        containerColor: Colors.black87,
+        child: Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(1000),
+                color: borderColor,
+              ),
+              child: Image.network(
+                widget.model.logo,
+                width: size.width > 850 ? 100 : 70,
+                height: size.width > 850 ? 100 : 70,
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Text(
+                      widget.model.name,
+                      maxLines: 2,
+                      softWrap: true,
+                      style: TextStyle(
+                          fontSize: size.width > 850 ? 30 : 20,
+                          color: borderColor,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    width:
+                        size.width > 850 ? size.width - 290 : size.width - 180,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ...(widget.model.degrees!.map((e) => Wrap(
+                            children: [
+                              Text(e.degree,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                      fontSize: size.width > 850 ? 20 : 15)),
+                              Text(
+                                " | ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width > 850 ? 20 : 15,
+                                    color: Colors.white70),
+                              ),
+                              Text(e.level,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      color: Colors.white70,
+                                      fontSize: size.width > 850 ? 20 : 15)),
                             ],
                           ))),
                     ],

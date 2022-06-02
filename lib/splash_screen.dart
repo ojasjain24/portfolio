@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:portfolio/data_file.dart';
 
-import 'home_page.dart';
+import 'Pages/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 000), () {
+    Timer(const Duration(milliseconds: 2000), () {
       Navigator.of(context)
           .push(
             MaterialPageRoute(builder: (context) => const HomePage()),
