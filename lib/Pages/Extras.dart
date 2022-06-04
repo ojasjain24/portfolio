@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:neon_widgets/neon_widgets.dart';
 import 'package:portfolio/Pages/home_page.dart';
+import 'package:portfolio/cards.dart';
 
+import '../appConstents.dart';
+import '../data_file.dart';
 import 'education_page.dart';
 
 class Extras extends StatefulWidget {
@@ -16,71 +20,170 @@ class ExtrasState extends State<Extras> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                height: size.height * 0.1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: size.height * 0.1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => const HomePage()));
+                      },
+                      child: const Text(
+                        "Home",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => const EducationPage()));
+                      },
+                      child: const Text(
+                        "Education",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    child: InkWell(
+                      onTap: () {
+                        setState(() {});
+                      },
+                      child: const Text(
+                        "More",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: oNeonText(
+                    text: "A bit more about me!",
+                    spreadColor: MainSpreadColor,
+                    textSize: HeadingFontSize,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: size.width > 850
+                      ? EdgeInsets.symmetric(horizontal: 200)
+                      : EdgeInsets.symmetric(horizontal: 30),
+                  alignment: Alignment.center,
+                  child: oNeonText(
+                    textAlign: TextAlign.justify,
+                    text: PortfolioDetails.extrasHeadLine,
+                    spreadColor: MainSpreadColor,
+                    textSize: CardTitleFontSize,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: oNeonText(
+                    text: "Features",
+                    spreadColor: MainSpreadColor,
+                    textSize: HeadingFontSize - 10,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Wrap(
                   children: [
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const HomePage()));
-                        },
-                        child: const Text(
-                          "Home",
-                          style: TextStyle(color: Colors.white, fontSize: 30),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const EducationPage()));
-                        },
-                        child: const Text(
-                          "Education",
-                          style: TextStyle(color: Colors.white, fontSize: 30),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {});
-                        },
-                        child: const Text(
-                          "More",
-                          style: TextStyle(color: Colors.white, fontSize: 30),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
+                    ...(PortfolioDetails.features
+                        .map(
+                          (e) => Container(
+                            padding: size.width > 850
+                                ? EdgeInsets.symmetric(horizontal: 200)
+                                : EdgeInsets.symmetric(horizontal: 30),
+                            child: featureCard(
+                              model: e,
+                            ),
+                          ),
+                        )
+                        .toList())
                   ],
                 ),
-              ),
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset("assets/images/construction.jpg",
-                    height: size.height * 0.6, width: size.width * 0.6),
-              ),
-              const Text(
-                "Under Construction",
-                style: TextStyle(color: Colors.white, fontSize: 50),
-              )
-            ],
-          ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: oNeonText(
+                    text: "Hobbies",
+                    spreadColor: MainSpreadColor,
+                    textSize: HeadingFontSize - 10,
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Container(
+                    padding: size.width > 850
+                        ? const EdgeInsets.all(30)
+                        : const EdgeInsets.all(12),
+                    margin: size.width > 850
+                        ? const EdgeInsets.symmetric(
+                            horizontal: 150, vertical: 30)
+                        : const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 12),
+                    child: Row(
+                      children: [
+                        ...(PortfolioDetails.hobbies
+                            .map(
+                              (e) => Tooltip(
+                                message: e.name,
+                                child: oNeonContainer(
+                                  containerColor: Colors.white,
+                                  margin: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
+                                  borderRadius: BorderRadius.circular(1000),
+                                  spreadColor:
+                                      Colors.indigoAccent.withOpacity(0.6),
+                                  lightSpreadRadius: size.width > 850 ? 10 : 4,
+                                  lightBlurRadius: size.width > 850 ? 30 : 12,
+                                  child: Image.asset(
+                                    e.assetImage ?? "",
+                                    width: size.width > 850 ? 70 : 50,
+                                    height: size.width > 850 ? 70 : 50,
+                                  ),
+                                ),
+                              ),
+                            )
+                            .toList())
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );

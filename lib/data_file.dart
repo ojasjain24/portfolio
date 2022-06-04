@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:portfolio/models/builds_model.dart';
+import 'package:portfolio/models/generic_model.dart';
 import 'package:portfolio/models/icon_link_model.dart';
 
 import 'models/WorksModel.dart';
@@ -27,9 +28,14 @@ class PortfolioDetails {
         "https://play.google.com/store/apps/developer?id=Anchal"),
     IconLinkModel("assets/images/linkedin.png",
         "https://www.linkedin.com/in/ojas-jain-028179197/"),
-    IconLinkModel("assets/images/github.png", "https://github.com/ojasjain24"),
     IconLinkModel(
-        "assets/images/dart.png", "https://pub.dev/packages/neon_widgets"),
+      "assets/images/github.png",
+      "https://github.com/ojasjain24",
+    ),
+    IconLinkModel(
+      "assets/images/dart.png",
+      "https://pub.dev/packages/neon_widgets",
+    ),
     IconLinkModel("assets/images/instagram.png",
         "https://www.instagram.com/casual_photography___/"),
   ];
@@ -108,6 +114,11 @@ class PortfolioDetails {
           IconLinkModel("assets/images/github.png",
               "https://github.com/ojasjain24/EDA/blob/master/MinorProject%20(3).ipynb")
         ]),
+    BuildsModel(
+      name: "RC robot",
+      description:
+          "Remote controlled car that takes inputs via bluetooth. Participated in the robo-race competition and got second position. Used aurdino, motor driver, bt module and motors.",
+    ),
   ];
 
   static List<WorksModel> techWorksList = [
@@ -162,7 +173,6 @@ class PortfolioDetails {
       description:
           "Developed UI for a cross platform social media application using flutter and dart and integrated it with Javascript backend using APIs.",
     ),
-
     WorksModel(
       link: "https://www.linkedin.com/company/e-city-vibes-pvt-ltd/",
       companyName: "E-City Vibes",
@@ -194,6 +204,7 @@ class PortfolioDetails {
           "This was a course + internship where I first learned and then worked on Data Analysis and data Prediction using Machine Learning and Python.",
     ),
   ];
+
   static List<WorksModel> leadWorksList = [
     WorksModel(
       link: "https://www.madiee.com/",
@@ -259,7 +270,6 @@ class PortfolioDetails {
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
         ""),
-
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
         ""),
@@ -277,14 +287,6 @@ class PortfolioDetails {
         ],
         logo: "assets/images/iiitdmkl.png",
         isCurrent: true),
-    // InstituteModel(
-    //     name: "SICA",
-    //     timeline: "Till 2019",
-    //     degrees: [
-    //       DegreeModel(degree: "12th", level: "CBSE", score: "83.2%"),
-    //       DegreeModel(degree: "10th", level: "CBSE", score: "8.6CGPA"),
-    //     ],
-    //     logo: "assets/images/sica.png")
   ];
 
   static List<InstituteModel> certificateList = [
@@ -324,6 +326,14 @@ class PortfolioDetails {
         logo: "assets/images/gcp_logo.png",
         link:
             "https://www.cloudskillsboost.google/public_profiles/b312a02e-07e3-4fa7-a4a8-b3b03dec2fcf/badges/1443194?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"),
+    InstituteModel(
+      name: "Abacus and mental math",
+      timeline: "",
+      degrees: [
+        DegreeModel(degree: "UcMas", level: "", score: ""),
+      ],
+      logo: "assets/images/ucmass.png",
+    ),
   ];
 
   static List<InstituteModel> eventCertificateList = [
@@ -392,4 +402,95 @@ class PortfolioDetails {
           "Was member of Solasta's marketing team. Solasta is the annual techno-cultural fest of IIIT Kurnool. Bought sponsors for the event and helped in the coordination",
     ),
   ];
+
+  static List<GenericModel> hobbies = [
+    GenericModel(
+        name: "Guitar", type: "hobby", assetImage: "assets/images/guitar.png"),
+    GenericModel(
+        name: "Photography",
+        type: "hobby",
+        assetImage: "assets/images/dslr.png"),
+    GenericModel(
+        name: "Swimming",
+        type: "hobby",
+        assetImage: "assets/images/swimming.png"),
+    GenericModel(
+        name: "Badminton",
+        type: "hobby",
+        assetImage: "assets/images/badminton.png"),
+    GenericModel(
+        name: "Basketball",
+        type: "hobby",
+        assetImage: "assets/images/basketball.png"),
+    GenericModel(
+        name: "volleyball",
+        type: "hobby",
+        assetImage: "assets/images/volleyball.png"),
+    GenericModel(
+        name: "table tennis",
+        type: "hobby",
+        assetImage: "assets/images/tt.png"),
+    GenericModel(
+        name: "football",
+        type: "hobby",
+        assetImage: "assets/images/football.png"),
+    GenericModel(
+        name: "doodling",
+        type: "hobby",
+        assetImage: "assets/images/doodle.png"),
+  ];
+  static List<GenericModel> features = [
+    GenericModel(
+        name: "Neon widgets featured",
+        description:
+            "Neon widgets, which is a flutter package that provides neon themed widgets, was featured on 45th edition of 'I should go to sleep' along with the blog on how to create the neon effect.",
+        link: "https://ishouldgotosleep.com/news/this-week-in-flutter-45/",
+        type: "Feature"),
+    GenericModel(
+        name: "how to create the neon effect blog",
+        description:
+            "This blog guides flutter developers to create the neon effects in flutter and use them in their projects. It also features a few modules that provides neon effects in flutter.",
+        link:
+            "https://medium.com/@119me0007/how-to-add-neon-effect-in-your-flutter-project-b2eaf2e258ae",
+        type: "Blog"),
+    GenericModel(
+        name: "how to make a more readable flutter code blog",
+        description:
+            "This blog helps flutter developers to create a more readable code and a cleaner file structure, that in turns improves project quality and reduces the development time",
+        link:
+            "https://medium.com/@119me0007/how-to-make-a-more-readable-flutter-code-fc9d86450dcb",
+        type: "Blog"),
+    GenericModel(
+        name: "Introduction to flutter",
+        description:
+            "In this session, I explained what is flutter and why it should be learned",
+        link:
+            "https://gdsc.community.dev/events/details/developer-student-clubs-indian-institute-of-information-technology-design-manufacturing-kurnool-presents-flutter-festival-indian-institute-of-information-technology-design-manufacturing-kurnool/",
+        type: "Talk"),
+    GenericModel(
+        name: "Getting started with flutter",
+        description:
+            "In this session, I along with other speakers, explained how to get started with flutter, create a project, project structure, basic concepts of flutter, by live coding.",
+        link:
+            "https://gdsc.community.dev/events/details/developer-student-clubs-indian-institute-of-information-technology-design-manufacturing-kurnool-presents-flutter-festival-indian-institute-of-information-technology-design-manufacturing-kurnool-2/",
+        type: "Live workshop"),
+    GenericModel(
+        name: "Flutter session",
+        description:
+            "In this session, I explained the basic concepts of flutter, by creating a dashboard. Created custom widgets and demonstrated the best practices and proper file structuring.",
+        link:
+            "https://gdsc.community.dev/events/details/developer-student-clubs-indian-institute-of-information-technology-design-manufacturing-kurnool-presents-flutter-festival-indian-institute-of-information-technology-design-manufacturing-kurnool-1/",
+        type: "Live workshop"),
+    GenericModel(
+        name: "Mannequin challenge winner",
+        description:
+            "I was the part of winning team of mannequin challenge, that was conducted by Solasta 2k20.",
+        type: "Award"),
+  ];
+
+  static String educationHeadLine =
+      "Currently I am perusing B.tech in mechanical engineering from Indian Institute of Information Technology (IIIT), Kurnool. Where I learned the core concepts of mechanical engineering, manufacturing, designing, operations, machining, mathematics, physics, etc. I also have completed multiple certified courses in different domains. Apart form these, I also have completed multiple uncertified courses software development.";
+
+  static String extrasHeadLine = ""
+      "Apart from coding and studying, I also do other stuffs like, writing blogs, playing guitar, photography, outdoor sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
 }
