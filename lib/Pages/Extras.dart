@@ -32,38 +32,50 @@ class ExtrasState extends State<Extras> {
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (ctx) => const HomePage()));
                       },
                       child: const Text(
                         "Home",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w100),
                       ),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (ctx) => const EducationPage()));
                       },
                       child: const Text(
                         "Education",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w100),
                       ),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         setState(() {});
                       },
                       child: const Text(
                         "More",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w800),
                       ),
                     ),
                   ),

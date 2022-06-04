@@ -39,7 +39,10 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
                 height: 70,
               ),
               ...PortfolioDetails.skillsList
-                  .map((e) => expandOnHover(skillIcon: e.imageAddress))
+                  .map((e) => Tooltip(
+                        child: expandOnHover(skillIcon: e.imageAddress),
+                        message: e.link,
+                      ))
                   .toList(),
               const SizedBox(
                 height: 70,
