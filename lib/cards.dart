@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:portfolio/appConstents.dart';
 import 'package:portfolio/models/education_model.dart';
+import 'package:portfolio/models/generic_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'models/WorksModel.dart';
@@ -65,7 +66,7 @@ class buildsCardState extends State<buildsCard> {
         }
       },
       onTap: () {
-        launch(widget.links![0].link);
+        widget.links != null ? launch(widget.links![0].link) : null;
       },
       child: oNeonContainer(
         clipBehaviour: Clip.antiAlias,
@@ -594,7 +595,7 @@ class certificateCardState extends State<certificateCard> {
                           fontWeight: FontWeight.w700),
                     ),
                     width:
-                        size.width > 850 ? size.width - 290 : size.width - 180,
+                        size.width > 850 ? size.width - 490 : size.width - 180,
                   ),
                   const SizedBox(
                     height: 10,
@@ -629,6 +630,86 @@ class certificateCardState extends State<certificateCard> {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class featureCard extends StatefulWidget {
+  featureCard({
+    required this.model,
+  });
+
+  GenericModel model;
+
+  @override
+  State<StatefulWidget> createState() {
+    return featureCardState();
+  }
+}
+
+class featureCardState extends State<featureCard> {
+  Color spreadColor = CardSpreadColor;
+  Color borderColor = Colors.white;
+  Color titleSpreadColor = CardTitleColor;
+  Color titleTextColor = Colors.white;
+  Color discpSpreadColor = CardDescriptionColor;
+  Color discpTextColor = Colors.white;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return InkWell(
+      onTap: () {
+        widget.model.link == null ? null : launch(widget.model.link ?? "");
+      },
+      child: oNeonContainer(
+        lightSpreadRadius: size.width > 850 ? 15 : 4,
+        lightBlurRadius: size.width > 850 ? 45 : 10,
+        spreadColor: Colors.indigo,
+        borderColor: borderColor,
+        width: size.width,
+        margin: const EdgeInsets.all(10),
+        borderWidth: 2,
+        borderRadius: BorderRadius.circular(CardRadius),
+        containerColor: Colors.black87,
+        child: Container(
+          margin: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              RichText(
+                text: TextSpan(
+                    style: TextStyle(
+                      fontSize: size.width > 850 ? 30 : 25,
+                      color: borderColor,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: widget.model.type + " | ",
+                        style: const TextStyle(color: Colors.indigo),
+                      ),
+                      TextSpan(
+                        text: widget.model.name,
+                      )
+                    ]),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                widget.model.description ?? "",
+                maxLines: 5,
+                softWrap: true,
+                style: TextStyle(
+                    fontSize: size.width > 850 ? 20 : 15,
+                    color: borderColor,
+                    fontWeight: FontWeight.w400),
+              ),
+            ],
+          ),
         ),
       ),
     );

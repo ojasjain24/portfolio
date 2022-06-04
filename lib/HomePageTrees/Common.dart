@@ -28,7 +28,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           height: 30,
         ),
 
-        // added a sized box at the end and start so that I don't disturb(push down the bottom widgets) the other widgets on hover( icon size changes from 50 to 70). put at both ends for the cases when Icons take two rows
+        // added a sized box at the end and start so that it don't disturb(push down the bottom widgets) the other widgets on hover( icon size changes from 50 to 70). put at both ends for the cases when Icons take two rows
         SizedBox(
           width: screenSize.width,
           child: Wrap(

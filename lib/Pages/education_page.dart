@@ -81,8 +81,9 @@ class EducationPageState extends State<EducationPage> {
               ),
             ),
             Container(
-              padding:
-                  size.width > 850 ? EdgeInsets.all(40) : EdgeInsets.all(5),
+              padding: size.width > 850
+                  ? EdgeInsets.symmetric(horizontal: 100, vertical: 10)
+                  : EdgeInsets.all(5),
               child: Column(
                 children: [
                   Align(
@@ -91,6 +92,18 @@ class EducationPageState extends State<EducationPage> {
                       text: "Ojas' Education",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: oNeonText(
+                      textAlign: TextAlign.justify,
+                      text: PortfolioDetails.educationHeadLine,
+                      spreadColor: MainSpreadColor,
+                      textSize: CardTitleFontSize,
                     ),
                   ),
                   const SizedBox(
