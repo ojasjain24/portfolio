@@ -21,7 +21,7 @@ class PortfolioDetails {
   ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
-      "I am a passionate software developer from India. I have worked on technologies like Flutter, Android, Unity, Java, Python, Augmented Reality, and many more. I love to learn new stuffs and build solutions out of it.";
+      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps and many more stuffs. I love to learn new stuffs and experiment with new things. As soon as I finds a problem, I try to build a product out of it";
 
   static List<IconLinkModel> socials = [
     IconLinkModel("assets/images/google-play.png",
@@ -230,52 +230,61 @@ class PortfolioDetails {
 
   static List<IconLinkModel> skillsList = [
     IconLinkModel(
-        "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg", ""),
+        "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+        "flutter"),
     IconLinkModel(
-        "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg", ""),
+        "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg", "dart"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-        ""),
+        "java"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
-        ""),
+        "android"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
-        ""),
+        "c"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
-        ""),
+        "c#"),
     IconLinkModel(
-        "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg", ""),
-    // IconLinkModel(
-    //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
-    //     ""),
-    IconLinkModel("https://www.vectorlogo.zone/logos/figma/figma-icon.svg", ""),
+        "https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg", "unity"),
     IconLinkModel(
-        "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", ""),
+        "https://www.vectorlogo.zone/logos/figma/figma-icon.svg", "figma"),
     IconLinkModel(
-        "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg", ""),
+        "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/adobe-xd.svg",
+        "Adobe Xd"),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+        "firebase"),
+    IconLinkModel(
+        "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg", "git"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-        ""),
+        "python"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
-        ""),
+        "HTML"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-        ""),
+        "CSS"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-        ""),
+        "javascript"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-        ""),
+        "node js"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-        ""),
+        "react"),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+        "docker"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
-        ""),
+        "redux"),
+    IconLinkModel(
+        "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/influxdb.svg",
+        "influxdb"),
   ];
 
   static List<InstituteModel> educationList = [

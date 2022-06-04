@@ -35,19 +35,24 @@ class EducationPageState extends State<EducationPage> {
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (ctx) => const HomePage()));
                       },
                       child: const Text(
                         "Home",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.pushReplacement(
                             context,
@@ -57,20 +62,27 @@ class EducationPageState extends State<EducationPage> {
                       },
                       child: const Text(
                         "Education",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w800),
                       ),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(10),
                     child: InkWell(
+                      hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (ctx) => Extras()));
                       },
                       child: const Text(
                         "More",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ),
@@ -86,7 +98,10 @@ class EducationPageState extends State<EducationPage> {
                   : EdgeInsets.all(5),
               child: Column(
                 children: [
-                  Align(
+                  Container(
+                    padding: size.width > 850
+                        ? EdgeInsets.symmetric(horizontal: 200)
+                        : EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
                     child: oNeonText(
                       text: "Ojas' Education",
@@ -97,7 +112,8 @@ class EducationPageState extends State<EducationPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Align(
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     alignment: Alignment.center,
                     child: oNeonText(
                       textAlign: TextAlign.justify,

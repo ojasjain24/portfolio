@@ -263,7 +263,7 @@ class worksCardState extends State<worksCard> {
                   children: [
                     Container(
                       alignment: Alignment.centerLeft,
-                      width: 300,
+                      width: size.width < 455 ? size.width - 110 : 455 - 150,
                       child: oNeonText(
                         textAlign: TextAlign.start,
                         text: widget.worksModel.companyName,
@@ -311,7 +311,7 @@ class worksCardState extends State<worksCard> {
                       spreadColor: discpSpreadColor,
                       textColor: discpTextColor,
                       fontWeight: FontWeight.w200,
-                      textSize: CardDescriptionFontSize,
+                      textSize: CardDescriptionFontSize - 1,
                     )
                   ],
                 ),
@@ -396,7 +396,7 @@ class educationCardState extends State<educationCard> {
         lightBlurRadius: size.width > 850 ? 45 : 10,
         spreadColor: spreadColor,
         borderColor: borderColor,
-        height: size.width > 850 ? 205 : 160,
+        height: size.width > 850 ? 205 : 170,
         margin: const EdgeInsets.all(10),
         borderWidth: 2,
         borderRadius: const BorderRadius.only(
@@ -422,7 +422,8 @@ class educationCardState extends State<educationCard> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.all(20),
+              margin: EdgeInsets.symmetric(
+                  vertical: 20, horizontal: size.width > 850 ? 20 : 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -446,45 +447,49 @@ class educationCardState extends State<educationCard> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ...(widget.model.degrees!.map((e) => Wrap(
-                            children: [
-                              Text(e.degree,
+                  Container(
+                    width:
+                        size.width < 850 ? size.width - 200 : size.width - 480,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ...(widget.model.degrees!.map((e) => Wrap(
+                              children: [
+                                Text(e.degree,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue,
+                                        fontSize: size.width > 850 ? 30 : 20)),
+                                Text(
+                                  " | ",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                      fontSize: size.width > 850 ? 30 : 20)),
-                              Text(
-                                " | ",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: size.width > 850 ? 30 : 20,
-                                    color: Colors.white70),
-                              ),
-                              Text(e.level,
+                                      fontSize: size.width > 850 ? 30 : 20,
+                                      color: Colors.white70),
+                                ),
+                                Text(e.level,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      color: Colors.white70,
+                                      fontSize: size.width > 850 ? 30 : 20,
+                                    )),
+                                Text(
+                                  " | ",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    color: Colors.white70,
-                                    fontSize: size.width > 850 ? 30 : 20,
-                                  )),
-                              Text(
-                                " | ",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: size.width > 850 ? 30 : 20,
-                                    color: Colors.white70),
-                              ),
-                              Text(e.score,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w300,
-                                    color: Colors.white54,
-                                    fontSize: size.width > 850 ? 30 : 20,
-                                  )),
-                            ],
-                          ))),
-                    ],
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: size.width > 850 ? 30 : 20,
+                                      color: Colors.white70),
+                                ),
+                                Text(e.score,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      color: Colors.white54,
+                                      fontSize: size.width > 850 ? 30 : 20,
+                                    )),
+                              ],
+                            ))),
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -665,12 +670,12 @@ class featureCardState extends State<featureCard> {
         widget.model.link == null ? null : launch(widget.model.link ?? "");
       },
       child: oNeonContainer(
-        lightSpreadRadius: size.width > 850 ? 15 : 4,
-        lightBlurRadius: size.width > 850 ? 45 : 10,
+        lightSpreadRadius: size.width > 850 ? 10 : 4,
+        lightBlurRadius: size.width > 850 ? 30 : 10,
         spreadColor: Colors.indigo,
         borderColor: borderColor,
         width: size.width,
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         borderWidth: 2,
         borderRadius: BorderRadius.circular(CardRadius),
         containerColor: Colors.black87,
