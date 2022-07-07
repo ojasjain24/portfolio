@@ -28,7 +28,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: size.height * 0.1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
