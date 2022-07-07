@@ -225,7 +225,7 @@ class worksCardState extends State<worksCard> {
         launch(widget.worksModel.link ?? "");
       },
       child: oNeonContainer(
-        width: 455,
+        width: 456,
         height: 260,
         spreadColor: spreadColor,
         borderColor: borderColor,
