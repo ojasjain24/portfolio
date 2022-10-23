@@ -104,7 +104,7 @@ class EducationPageState extends State<EducationPage> {
                         : EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
                     child: oNeonText(
-                      text: "Ojas' Education",
+                      text: "Education",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,
                     ),

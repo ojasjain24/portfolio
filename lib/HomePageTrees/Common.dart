@@ -19,7 +19,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         Align(
           alignment: Alignment.center,
           child: oNeonText(
-            text: "Ojas' Magic Tools",
+            text: "Tools and Technologies Inventory",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
           ),
@@ -58,7 +58,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           child: Align(
             alignment: Alignment.center,
             child: oNeonText(
-              text: "Ojas' Builds",
+              text: "Projects",
               spreadColor: MainSpreadColor,
               textSize: HeadingFontSize,
             ),
@@ -93,7 +93,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         Align(
           alignment: Alignment.center,
           child: oNeonText(
-            text: "Ojas Works on Tech",
+            text: "Technical Work Experiences",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
           ),
@@ -125,7 +125,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         Align(
           alignment: Alignment.center,
           child: oNeonText(
-            text: "Ojas Leads",
+            text: "Non-technical Work Experiences",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
           ),
@@ -159,7 +159,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         Align(
           alignment: Alignment.center,
           child: oNeonText(
-            text: "Ojas Volunteers",
+            text: "Volunteer Experience",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
           ),
