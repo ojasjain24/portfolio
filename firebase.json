@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ojas-jain",
     "public": "build/web",
     "ignore": [
       "firebase.json",
