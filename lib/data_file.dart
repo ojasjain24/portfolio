@@ -21,7 +21,7 @@ class PortfolioDetails {
   ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
-      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps and many more stuffs. I love to learn new stuffs and experiment with new things. As soon as I finds a problem, I try to build a product out of it";
+      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps and many more things. I love to learn new things and experiment with new things. As soon as I finds a problem, I try to build a product out of it";
 
   static List<IconLinkModel> socials = [
     IconLinkModel("assets/images/google-play.png",
@@ -498,7 +498,7 @@ class PortfolioDetails {
   ];
 
   static String educationHeadLine =
-      "Currently I am perusing B.tech from Indian Institute of Information Technology (IIIT), Kurnool. Where I learned the core concepts of mechanical engineering, manufacturing, designing, operations, machining, mathematics, physics, etc. I also have completed multiple certified courses in different domains. Apart form these, I also have completed multiple uncertified courses software development.";
+      "Currently I am perusing B.tech in mechanical engineering from Indian Institute of Information Technology (IIIT), Kurnool. Where I learned the core concepts of mechanical engineering, manufacturing, designing, operations, machining, mathematics, physics, etc. I also have completed multiple certified courses in different domains. Apart form these, I also have completed multiple uncertified courses software development.";
 
   static String extrasHeadLine = ""
       "Apart from coding and studying, I also do other stuffs like, writing blogs, playing guitar, photography, outdoor sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
