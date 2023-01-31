@@ -501,5 +501,5 @@ class PortfolioDetails {
       "Currently I am perusing B.tech in 2019-2023 batch from Indian Institute of Information Technology (IIIT), Kurnool. I have explored various domains during this period and worked on android dev, web dev, cross platform dev, game dev, ML, IOT, Digital Twins, AR/VR, CAD designing, etc. I have created various industry level projects and also have done multiple internships in various startups and companies. I also have completed multiple certified and uncertified courses in different domains. Apart form these, I took active part in club activities as well. I was photography club coordinator, placement cell coordinator, marketing team member, android lead in Google developer student Club, flutter facilitator in flutter festival, played guitar in music club.";
 
   static String extrasHeadLine = ""
-      "Apart from coding and studying, I also do other stuffs like, writing blogs, playing guitar, photography, playing sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
+      "Apart from coding and studying, I also like to do other stuffs like, writing blogs, playing guitar, photography, playing sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
 }
