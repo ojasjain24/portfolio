@@ -50,7 +50,7 @@ Widget widgetTreeHorizontal(size) {
                           textSize: 30,
                           blurRadius: 20,
                           spreadColor: Colors.deepPurple,
-                          textAlign: TextAlign.justify,
+                          textAlign: TextAlign.left,
                         ),
                       ],
                     ),
