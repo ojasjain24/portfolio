@@ -21,7 +21,7 @@ class PortfolioDetails {
   ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
-      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps and many more things. I love to learn new things and experiment with new things. As soon as I finds a problem, I try to build a product out of it";
+      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps, developers toolkits and many more things. I love to explore new domains. I like to take challenging tasks and solve problems.";
 
   static List<IconLinkModel> socials = [
     IconLinkModel("assets/images/google-play.png",
@@ -126,11 +126,11 @@ class PortfolioDetails {
       link: "https://iudx.org.in/",
       logo: "assets/images/iudx.png",
       companyName: "IUDX, IISc",
-      endDate: "Present",
+      endDate: "October 2022",
       startDate: "May 2022",
       title: "Software development Intern",
-      description: "",
-      isCurrent: true,
+      description: "Worked in the frontend development team and contributed to multiple projects. Worked on geojsons, created Dashboards and Storyboards, Plotted data on maps and graphs, and many more things.",
+      isCurrent: false,
     ),
     WorksModel(
       link: "https://www.linkedin.com/company/affixchat/",
@@ -153,16 +153,16 @@ class PortfolioDetails {
       description:
           "Worked on client facing cross platform application on flutter in the healthcare technology domain.",
     ),
-    // WorksModel(
-    //   link: "https://research.samsung.com/sri-b",
-    //   companyName: "Samsung PRISM",
-    //   endDate: "Feb 2022",
-    //   startDate: "July 2021",
-    //   title: "R&D intern",
-    //   logo: "assets/images/512.png",
-    //   description:
-    //   "This is a student program, where we worked on an ML based project at Samsung R&D bangalore.",
-    // ),
+    WorksModel(
+      link: "https://research.samsung.com/sri-b",
+      companyName: "Samsung PRISM",
+      endDate: "February 2022",
+      startDate: "August 2021",
+      title: "R&D intern",
+      logo: "assets/images/samsung.png",
+      description:
+      "Was part of 'DNN development for Human Pose Estimation' work-let. Researched on DNN and CNN to create the best possible Model.",
+    ),
     WorksModel(
       link: "https://developersmonk.com/",
       companyName: "Developers Monk",
@@ -214,7 +214,7 @@ class PortfolioDetails {
       startDate: "January 2022",
       title: "product management Intern",
       description:
-          "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts.",
+          "Managed and designed games for corporate training.Lead multiple game design teams and delivered game concepts. Helped in creating a smooth information flow system within different teams.",
     ),
     WorksModel(
       logo: "assets/images/aim2excel.png",
@@ -498,8 +498,8 @@ class PortfolioDetails {
   ];
 
   static String educationHeadLine =
-      "Currently I am perusing B.tech in mechanical engineering from Indian Institute of Information Technology (IIIT), Kurnool. Where I learned the core concepts of mechanical engineering, manufacturing, designing, operations, machining, mathematics, physics, etc. I also have completed multiple certified courses in different domains. Apart form these, I also have completed multiple uncertified courses software development.";
+      "Currently I am perusing B.tech in 2019-2023 batch from Indian Institute of Information Technology (IIIT), Kurnool. I have explored various domains during this period and worked on android dev, web dev, cross platform dev, game dev, ML, IOT, Digital Twins, AR/VR, CAD designing, etc. I have created various industry level projects and also have done multiple internships in various startups and companies. I also have completed multiple certified and uncertified courses in different domains. Apart form these, I took active part in club activities as well. I was photography club coordinator, placement cell coordinator, marketing team member, android lead in Google developer student Club, flutter facilitator in flutter festival, played guitar in music club.";
 
   static String extrasHeadLine = ""
-      "Apart from coding and studying, I also do other stuffs like, writing blogs, playing guitar, photography, outdoor sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
+      "Apart from coding and studying, I also do other stuffs like, writing blogs, playing guitar, photography, playing sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
 }
