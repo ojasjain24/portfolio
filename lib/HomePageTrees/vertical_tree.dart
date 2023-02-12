@@ -123,13 +123,13 @@ Widget widgetTreeVertical(size) {
                   onTap: () {
                     launch(e.link);
                   },
-                  child: Image.asset(
+                  child: Padding(padding: EdgeInsets.all(5), child : Image.asset(
                     e.imageAddress,
                     height: 50,
                     width: 50,
                   ),
                 ),
-              )),
+              ))),
             ],
           ),
           const SizedBox(

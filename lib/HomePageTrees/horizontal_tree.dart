@@ -6,8 +6,6 @@ import 'package:portfolio/HomePageTrees/Common.dart';
 import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../appConstents.dart';
-
 Widget widgetTreeHorizontal(size) {
   return SingleChildScrollView(
     scrollDirection: Axis.vertical,
@@ -40,7 +38,7 @@ Widget widgetTreeHorizontal(size) {
                           text: PortfolioDetails.myName,
                           textSize: (96),
                           blurRadius: 40,
-                          spreadColor: MainSpreadColor,
+                          spreadColor: Colors.white,
                         ),
                         const SizedBox(
                           height: 30,
@@ -49,7 +47,7 @@ Widget widgetTreeHorizontal(size) {
                           text: PortfolioDetails.bio,
                           textSize: 30,
                           blurRadius: 20,
-                          spreadColor: Colors.deepPurple,
+                          spreadColor: Colors.white,
                           textAlign: TextAlign.left,
                         ),
                       ],
@@ -57,16 +55,18 @@ Widget widgetTreeHorizontal(size) {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Row(
+
                         children: [
                           ...(PortfolioDetails.socials.map((e) => InkWell(
                               onTap: () {
                                 launch(e.link);
                               },
-                              child: Image.asset(
+                              child: Padding(padding: EdgeInsets.all(5),
+                                child: Image.asset(
                                 e.imageAddress,
                                 height: 50,
                                 width: 50,
-                              )))),
+                              ))))),
                         ],
                       ),
                     ),

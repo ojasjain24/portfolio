@@ -208,23 +208,36 @@ class expandOnHover extends StatefulWidget {
 
 class expandOnHoverState extends State<expandOnHover> {
   double iconSize = 50;
+  double scale = 1.0;
 
   @override
   Widget build(BuildContext context) {
     return Wrap(
       children: [
         InkWell(
-          onTap: () {},
-          onHover: (val) {
-            iconSize = val ? 70 : 50;
-            setState(() {});
-          },
-          child: SvgPicture.network(
-            widget.skillIcon,
-            height: iconSize,
-            width: iconSize,
-          ),
-        ),
+            onTap: () {},
+            onHover: (value) {
+              if (value) {
+                setState(() {
+                  scale = 1.4;
+                });
+              } else {
+                setState(() {
+                  scale = 1.0;
+                });
+              }
+            },
+            child: Padding(
+              padding: EdgeInsets.all(5),
+              child: Transform.scale(
+                scale: scale,
+                child: SvgPicture.network(
+                  widget.skillIcon,
+                  height: iconSize,
+                  width: iconSize,
+                ),
+              ),
+            )),
       ],
     );
   }

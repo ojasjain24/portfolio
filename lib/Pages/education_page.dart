@@ -22,7 +22,7 @@ class EducationPageState extends State<EducationPage> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: primaryBlack.shade400,
       body: SingleChildScrollView(
         child: Column(
           children: [

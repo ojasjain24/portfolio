@@ -21,7 +21,7 @@ class PortfolioDetails {
   ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
-      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing android apps, cross platform apps, games, desktop apps, websites, web apps, developers toolkits and many more things. I love to explore new domains. I like to take challenging tasks and solve problems.";
+      "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing Android Apps, Cross Platform Apps, Games, Desktop Apps, Websites, Web apps, Developers Toolkits and many more things. I love to explore new domains. I like to take challenging tasks and solve problems.";
 
   static List<IconLinkModel> socials = [
     IconLinkModel("assets/images/google-play.png",
@@ -432,19 +432,19 @@ class PortfolioDetails {
         type: "hobby",
         assetImage: "assets/images/basketball.png"),
     GenericModel(
-        name: "volleyball",
+        name: "Volleyball",
         type: "hobby",
         assetImage: "assets/images/volleyball.png"),
     GenericModel(
-        name: "table tennis",
+        name: "Table Tennis",
         type: "hobby",
         assetImage: "assets/images/tt.png"),
     GenericModel(
-        name: "football",
+        name: "Football",
         type: "hobby",
         assetImage: "assets/images/football.png"),
     GenericModel(
-        name: "doodling",
+        name: "Doodling",
         type: "hobby",
         assetImage: "assets/images/doodle.png"),
   ];
@@ -498,8 +498,8 @@ class PortfolioDetails {
   ];
 
   static String educationHeadLine =
-      "Currently I am perusing B.tech in 2019-2023 batch from Indian Institute of Information Technology (IIIT), Kurnool. I have explored various domains during this period and worked on android dev, web dev, cross platform dev, game dev, ML, IOT, Digital Twins, AR/VR, CAD designing, etc. I have created various industry level projects and also have done multiple internships in various startups and companies. I also have completed multiple certified and uncertified courses in different domains. Apart form these, I took active part in club activities as well. I was photography club coordinator, placement cell coordinator, marketing team member, android lead in Google developer student Club, flutter facilitator in flutter festival, played guitar in music club.";
+      "Currently I am perusing B.tech in 2019-2023 batch from Indian Institute of Information Technology (IIIT), Kurnool. I have explored various domains during this period and worked on Android Dev, Web Dev, Cross Platform Dev, Game Dev, ML, IOT, Digital Twins, AR/VR, CAD Designing, etc. I have created various industry level projects and also have done multiple internships in various startups and companies. I have completed multiple certified and uncertified courses in different domains. Apart form these, I took active part in club activities as well. I was the Photography Club Coordinator, Placement Cell Coordinator, Marketing Team Member, Android Lead in Google Developer Student Club, Flutter Facilitator in Flutter Festival, Guitarist in Music Club, and Many more...";
 
   static String extrasHeadLine = ""
-      "Apart from coding and studying, I also like to do other stuffs like, writing blogs, playing guitar, photography, playing sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
+      "Apart from coding and academics, I also like to do other stuff like, writing blogs, playing guitar, photography, playing sports, and many more. This section contains all those hobbies and the stuff I like do in my free time";
 }

@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:portfolio/appConstents.dart';
 import 'package:portfolio/HomePageTrees/horizontal_tree.dart';
 import 'package:portfolio/HomePageTrees/vertical_tree.dart';
 import 'package:portfolio/Pages/Extras.dart';
@@ -16,15 +15,12 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  Color color =
-      Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: primaryBlack.shade400,
       body: SingleChildScrollView(
         child: Column(
           children: [
