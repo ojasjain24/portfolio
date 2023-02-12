@@ -185,7 +185,7 @@ class worksCard extends StatefulWidget {
 
 class worksCardState extends State<worksCard> {
   Color spreadColor = Colors.transparent;
-  Color borderColor = Colors.white54;
+  Color borderColor = Colors.white70;
   Color titleSpreadColor = Colors.transparent;
   Color titleTextColor = Colors.white54;
   Color discpSpreadColor = Colors.transparent;
@@ -213,7 +213,7 @@ class worksCardState extends State<worksCard> {
                   ? CardSpreadCurrentColor
                   : CardSpreadColor
               : Colors.transparent;
-          borderColor = state ? Colors.white : Colors.white54;
+          borderColor = state ? Colors.white : Colors.white70;
           titleSpreadColor = state ? CardTitleColor : Colors.transparent;
           titleTextColor = state ? Colors.white : Colors.white54;
           discpSpreadColor = state ? CardDescriptionColor : Colors.transparent;
@@ -327,7 +327,6 @@ class worksCardState extends State<worksCard> {
               isSoftWrap: true,
               textAlign: TextAlign.start,
               text: "${widget.worksModel.description}",
-              fontWeight: FontWeight.bold,
               textSize: CardDescriptionFontSize,
               blurRadius: 10,
             )
@@ -672,7 +671,7 @@ class featureCardState extends State<featureCard> {
       child: oNeonContainer(
         lightSpreadRadius: size.width > 850 ? 10 : 4,
         lightBlurRadius: size.width > 850 ? 30 : 10,
-        spreadColor: Colors.indigo,
+        spreadColor: Colors.indigo.withOpacity(0.7),
         borderColor: borderColor,
         width: size.width,
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),

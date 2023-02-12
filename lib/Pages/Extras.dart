@@ -19,7 +19,7 @@ class ExtrasState extends State<Extras> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: primaryBlack.shade400,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -119,7 +119,7 @@ class ExtrasState extends State<Extras> {
                 Align(
                   alignment: Alignment.center,
                   child: oNeonText(
-                    text: "Features",
+                    text: "Achievements",
                     spreadColor: MainSpreadColor,
                     textSize: HeadingFontSize - 10,
                   ),
@@ -177,7 +177,7 @@ class ExtrasState extends State<Extras> {
                                   padding: const EdgeInsets.all(10),
                                   borderRadius: BorderRadius.circular(1000),
                                   spreadColor:
-                                      Colors.indigoAccent.withOpacity(0.6),
+                                      Colors.indigoAccent.withOpacity(0.7),
                                   lightSpreadRadius: size.width > 850 ? 10 : 4,
                                   lightBlurRadius: size.width > 850 ? 30 : 12,
                                   child: Image.asset(
