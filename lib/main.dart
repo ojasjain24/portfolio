@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'appConstents.dart';
 import 'splash_screen.dart';
@@ -9,8 +10,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,8 +33,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.mulishTextTheme(textTheme),
+
+      ),
       title: 'Ojas Jain',
+
       routes: {
         '/': (ctx) => const SplashScreen(),
       },
