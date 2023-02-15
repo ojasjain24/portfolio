@@ -78,7 +78,7 @@ class buildsCardState extends State<buildsCard> {
         spreadColor: spreadColor,
         borderColor: borderColor,
         width: 440,
-        height: 410,
+        height: 420,
         padding: const EdgeInsets.only(
           left: 10,
           right: 10,
@@ -321,7 +321,8 @@ class worksCardState extends State<worksCard> {
               height: 10,
             ),
             oNeonText(
-              maxLine: 6,
+              maxLine: size.width > 850 ? 6 : 5,
+              textOverflow: TextOverflow.ellipsis,
               spreadColor: discpSpreadColor,
               textColor: discpTextColor,
               isSoftWrap: true,
@@ -357,6 +358,12 @@ class educationCardState extends State<educationCard> {
   Color titleTextColor = Colors.white54;
   Color discpSpreadColor = Colors.transparent;
   Color discpTextColor = Colors.white54;
+  Color degreeColor = Colors.blue.shade200;
+  Color courseColor = Colors.white54;
+  Color gpaColor = Colors.white54;
+  Color degreeSpreadColor = Colors.transparent;
+  Color courseSpreadColor = Colors.transparent;
+  Color gpaSpreadColor = Colors.transparent;
 
   @override
   Widget build(BuildContext context) {
@@ -369,6 +376,14 @@ class educationCardState extends State<educationCard> {
       titleTextColor = Colors.white;
       discpSpreadColor = CardDescriptionColor;
       discpTextColor = Colors.white;
+
+      degreeColor = Colors.blue;
+      courseColor = Colors.white;
+      gpaColor = Colors.white;
+      degreeSpreadColor = Colors.blue.shade400;
+      courseSpreadColor = Colors.white70;
+      gpaSpreadColor = Colors.white54;
+
       setState(() {});
     }
     return InkWell(
@@ -384,6 +399,14 @@ class educationCardState extends State<educationCard> {
           titleTextColor = state ? Colors.white : Colors.white54;
           discpSpreadColor = state ? CardDescriptionColor : Colors.transparent;
           discpTextColor = state ? Colors.white : Colors.white54;
+
+          degreeColor = state ? Colors.blue : Colors.blue.shade200;
+          courseColor = state ? Colors.white : Colors.white70;
+          gpaColor = state ? Colors.white : Colors.white54;
+          degreeSpreadColor = state ? Colors.blue.shade400 : Colors.transparent;
+          courseSpreadColor = state ? Colors.white70 : Colors.transparent;
+          gpaSpreadColor = state ? Colors.white54 : Colors.transparent;
+
           setState(() {});
         }
       },
@@ -404,7 +427,7 @@ class educationCardState extends State<educationCard> {
           bottomLeft: Radius.circular(1000),
           topLeft: Radius.circular(1000),
         ),
-        containerColor: Colors.black87,
+        containerColor: Colors.black,
         child: Row(
           children: [
             Container(
@@ -454,37 +477,39 @@ class educationCardState extends State<educationCard> {
                       children: [
                         ...(widget.model.degrees!.map((e) => Wrap(
                               children: [
-                                Text(e.degree,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue,
-                                        fontSize: size.width > 850 ? 30 : 20)),
-                                Text(
-                                  " | ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: size.width > 850 ? 30 : 20,
-                                      color: Colors.white70),
+                                oNeonText(
+                                    text: e.degree,
+                                    fontWeight: FontWeight.bold,
+                                    textColor: degreeColor,
+                                    spreadColor: degreeSpreadColor,
+                                    textSize: size.width > 850 ? 30 : 20),
+                                oNeonText(
+                                  text: " | ",
+                                  fontWeight: FontWeight.bold,
+                                  textSize: size.width > 850 ? 30 : 20,
+                                  textColor: courseColor,
+                                  spreadColor: courseSpreadColor,
                                 ),
-                                Text(e.level,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.white70,
-                                      fontSize: size.width > 850 ? 30 : 20,
-                                    )),
-                                Text(
-                                  " | ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: size.width > 850 ? 30 : 20,
-                                      color: Colors.white70),
+                                oNeonText(
+                                  text: e.level,
+                                  fontWeight: FontWeight.normal,
+                                  textColor: courseColor,
+                                  spreadColor: courseSpreadColor,
+                                  textSize: size.width > 850 ? 30 : 20,
                                 ),
-                                Text(e.score,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white54,
-                                      fontSize: size.width > 850 ? 30 : 20,
-                                    )),
+                                oNeonText(
+                                    text: " | ",
+                                    fontWeight: FontWeight.bold,
+                                    textSize: size.width > 850 ? 30 : 20,
+                                    textColor: courseColor,
+                                    spreadColor: courseSpreadColor),
+                                oNeonText(
+                                  text: e.score,
+                                  fontWeight: FontWeight.w300,
+                                  textColor: courseColor,
+                                  spreadColor: courseSpreadColor,
+                                  textSize: size.width > 850 ? 30 : 20,
+                                ),
                               ],
                             ))),
                       ],
@@ -521,6 +546,11 @@ class certificateCardState extends State<certificateCard> {
   Color discpSpreadColor = Colors.transparent;
   Color discpTextColor = Colors.white54;
 
+  Color orgColor = Colors.blue.shade200;
+  Color providerColor = Colors.white54;
+  Color orgSpreadColor = Colors.transparent;
+  Color providerSpreadColor = Colors.transparent;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -532,6 +562,11 @@ class certificateCardState extends State<certificateCard> {
       titleTextColor = Colors.white;
       discpSpreadColor = CardDescriptionColor;
       discpTextColor = Colors.white;
+
+      orgColor = Colors.blue;
+      providerColor = Colors.white;
+      orgSpreadColor = Colors.blue.shade400;
+      providerSpreadColor = Colors.white70;
       setState(() {});
     }
     return InkWell(
@@ -547,6 +582,12 @@ class certificateCardState extends State<certificateCard> {
           titleTextColor = state ? Colors.white : Colors.white54;
           discpSpreadColor = state ? CardDescriptionColor : Colors.transparent;
           discpTextColor = state ? Colors.white : Colors.white54;
+
+          orgColor = state ? Colors.blue : Colors.blue.shade200;
+          providerColor = state ? Colors.white : Colors.white70;
+          orgSpreadColor = state ? Colors.blue.shade400 : Colors.transparent;
+          providerSpreadColor = state ? Colors.white70 : Colors.transparent;
+
           setState(() {});
         }
       },
@@ -567,7 +608,7 @@ class certificateCardState extends State<certificateCard> {
           bottomLeft: Radius.circular(1000),
           topLeft: Radius.circular(1000),
         ),
-        containerColor: Colors.black87,
+        containerColor: Colors.black,
         child: Row(
           children: [
             Container(
@@ -609,23 +650,24 @@ class certificateCardState extends State<certificateCard> {
                     children: [
                       ...(widget.model.degrees!.map((e) => Wrap(
                             children: [
-                              Text(e.degree,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                      fontSize: size.width > 850 ? 20 : 15)),
-                              Text(
-                                " | ",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: size.width > 850 ? 20 : 15,
-                                    color: Colors.white70),
-                              ),
-                              Text(e.level,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.white70,
-                                      fontSize: size.width > 850 ? 20 : 15)),
+                              oNeonText(
+                                  text: e.degree,
+                                  fontWeight: FontWeight.bold,
+                                  textColor: orgColor,
+                                  spreadColor: orgSpreadColor,
+                                  textSize: size.width > 850 ? 20 : 15),
+                              oNeonText(
+                                  text: " | ",
+                                  fontWeight: FontWeight.bold,
+                                  textSize: size.width > 850 ? 20 : 15,
+                                  textColor: providerColor,
+                                spreadColor: providerSpreadColor,),
+                              oNeonText(
+                                  text: e.level,
+                                  fontWeight: FontWeight.normal,
+                                  textColor: providerColor,
+                                  spreadColor: providerSpreadColor,
+                                  textSize: size.width > 850 ? 20 : 15),
                             ],
                           ))),
                     ],
