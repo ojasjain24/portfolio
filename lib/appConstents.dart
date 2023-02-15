@@ -19,7 +19,7 @@ const MaterialColor primaryBlack = MaterialColor(
     100: Color(0xFF484848),
     200: Color(0xFF2D2D2D),
     300: Color(0xFF212121),
-    400: Color(0xFF151515),
+    400: Color(0xFF0E0E0E),
     500: Color(_blackPrimaryValue),
     600: Color(0xFF000000),
     700: Color(0xFF000000),
