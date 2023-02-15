@@ -115,7 +115,7 @@ class buildsCardState extends State<buildsCard> {
                         text: widget.name,
                         spreadColor: titleSpreadColor,
                         textColor: titleTextColor,
-                        textSize: 25,
+                        textSize: CardTitleFontSize,
                       ),
                       const SizedBox(
                         height: 10,
@@ -127,7 +127,7 @@ class buildsCardState extends State<buildsCard> {
                         textOverflow: TextOverflow.ellipsis,
                         spreadColor: discpSpreadColor,
                         textColor: discpTextColor,
-                        textSize: 15,
+                        textSize: CardDescriptionFontSize,
                       ),
                       const SizedBox(
                         height: 40,
@@ -297,7 +297,7 @@ class worksCardState extends State<worksCard> {
                           spreadColor: discpSpreadColor,
                           textColor: discpTextColor,
                           fontWeight: FontWeight.w400,
-                          textSize: CardTitleFontSize - 6,
+                          textSize: CardDescriptionFontSize,
                           isSoftWrap: true,
                         ),
                       ),

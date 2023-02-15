@@ -7,9 +7,9 @@ Color CardSpreadColor = Colors.tealAccent.withOpacity(0.45);
 Color CardSpreadCurrentColor = Colors.tealAccent.withOpacity(0.45);
 double CardPadding = 20;
 double CardDescriptionFontSize = 15;
-double CardTitleFontSize = 25;
+double CardTitleFontSize = 22;
 double CardRadius = 10;
-double HeadingFontSize = 60;
+double HeadingFontSize = 55;
 Color MainSpreadColor = Colors.white70;
 
 const MaterialColor primaryBlack = MaterialColor(
