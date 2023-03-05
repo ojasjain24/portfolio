@@ -31,7 +31,7 @@ Widget widgetTreeHorizontal(size) {
                       children: [
                         oFlickerNeonText(
                           flickerTimeInMilliSeconds: 1000,
-                          randomFlicker: true,
+                          randomFlicker: false,
                           text: PortfolioDetails.myName,
                           fontFamily: 'Monoton',
                           textSize: (80),
