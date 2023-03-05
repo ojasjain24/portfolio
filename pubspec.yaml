@@ -66,10 +66,16 @@ flutter:
     - assets/images/
   #   - images/a_dot_ham.jpeg
 
-#  fonts:
-#    - family: Mulish
-#      fonts:
-#        - asset: assets/fonts/Mulish-Medium.ttf
+  fonts:
+    - family: TiltPrism
+      fonts:
+        - asset: assets/fonts/TiltPrism-Regular-VariableFont_XROT,YROT.ttf
+    - family: RockSalt
+      fonts:
+        - asset: assets/fonts/RockSalt-Regular.ttf
+    - family: Monoton
+      fonts:
+        - asset: assets/fonts/Monoton-Regular.ttf
 
 
 
