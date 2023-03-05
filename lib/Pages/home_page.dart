@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/appConstents.dart';
 import 'package:portfolio/HomePageTrees/horizontal_tree.dart';
 import 'package:portfolio/HomePageTrees/vertical_tree.dart';
 import 'package:portfolio/Pages/Extras.dart';
 import 'package:portfolio/Pages/education_page.dart';
+import 'package:portfolio/appConstents.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -87,7 +87,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             SizedBox(
-              child: size.width >= 850
+              child: size.width >= 1020
                   ? widgetTreeHorizontal(Size(size.width, size.height * 0.9))
                   : widgetTreeVertical(Size(size.width, size.height * 0.9)),
             ),

@@ -36,7 +36,8 @@ Widget widgetTreeHorizontal(size) {
                           flickerTimeInMilliSeconds: 1000,
                           randomFlicker: true,
                           text: PortfolioDetails.myName,
-                          textSize: (96),
+                          fontFamily: 'Monoton',
+                          textSize: (80),
                           blurRadius: 40,
                           spreadColor: Colors.white,
                         ),
@@ -55,18 +56,18 @@ Widget widgetTreeHorizontal(size) {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Row(
-
                         children: [
                           ...(PortfolioDetails.socials.map((e) => InkWell(
                               onTap: () {
                                 launch(e.link);
                               },
-                              child: Padding(padding: EdgeInsets.all(5),
-                                child: Image.asset(
-                                e.imageAddress,
-                                height: 50,
-                                width: 50,
-                              ))))),
+                              child: Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: Image.asset(
+                                    e.imageAddress,
+                                    height: 50,
+                                    width: 50,
+                                  ))))),
                         ],
                       ),
                     ),

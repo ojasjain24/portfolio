@@ -31,7 +31,8 @@ Widget widgetTreeVertical(size) {
                 flickerTimeInMilliSeconds: 1000,
                 randomFlicker: true,
                 text: PortfolioDetails.myName,
-                textSize: 74,
+                fontFamily: 'Monoton',
+                textSize: 64,
                 blurRadius: 20,
                 spreadColor: MainSpreadColor,
               ),
@@ -118,18 +119,19 @@ Widget widgetTreeVertical(size) {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ...(PortfolioDetails.socials.map(
-                (e) => InkWell(
-                  onTap: () {
-                    launch(e.link);
-                  },
-                  child: Padding(padding: EdgeInsets.all(5), child : Image.asset(
-                    e.imageAddress,
-                    height: 50,
-                    width: 50,
-                  ),
-                ),
-              ))),
+              ...(PortfolioDetails.socials.map((e) => InkWell(
+                    onTap: () {
+                      launch(e.link);
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Image.asset(
+                        e.imageAddress,
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+                  ))),
             ],
           ),
           const SizedBox(
