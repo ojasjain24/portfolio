@@ -29,9 +29,6 @@ Widget widgetTreeHorizontal(size) {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          height: 40,
-                        ),
                         oFlickerNeonText(
                           flickerTimeInMilliSeconds: 1000,
                           randomFlicker: true,
@@ -42,7 +39,7 @@ Widget widgetTreeHorizontal(size) {
                           spreadColor: Colors.white,
                         ),
                         const SizedBox(
-                          height: 30,
+                          height: 20,
                         ),
                         oNeonText(
                           text: PortfolioDetails.bio,
