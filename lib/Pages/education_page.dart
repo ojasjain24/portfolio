@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 
-import '../appConstents.dart';
+import '../app_constants.dart';
 import '../cards.dart';
 import '../data_file.dart';
-import 'Extras.dart';
+import 'extras.dart';
 import 'home_page.dart';
 
 class EducationPage extends StatefulWidget {
@@ -26,7 +26,7 @@ class EducationPageState extends State<EducationPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: size.height * 0.1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -75,7 +75,7 @@ class EducationPageState extends State<EducationPage> {
                       hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (ctx) => Extras()));
+                            MaterialPageRoute(builder: (ctx) => const Extras()));
                       },
                       child: const Text(
                         "More",
@@ -94,14 +94,14 @@ class EducationPageState extends State<EducationPage> {
             ),
             Container(
               padding: size.width > 850
-                  ? EdgeInsets.symmetric(horizontal: 100, vertical: 10)
-                  : EdgeInsets.all(5),
+                  ? const EdgeInsets.symmetric(horizontal: 100, vertical: 10)
+                  : const EdgeInsets.all(5),
               child: Column(
                 children: [
                   Container(
                     padding: size.width > 850
-                        ? EdgeInsets.symmetric(horizontal: 200)
-                        : EdgeInsets.symmetric(horizontal: 30),
+                        ? const EdgeInsets.symmetric(horizontal: 200)
+                        : const EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
                     child: NeonText(
                       text: "Education",
@@ -113,7 +113,7 @@ class EducationPageState extends State<EducationPage> {
                     height: 20,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     alignment: Alignment.center,
                     child: NeonText(
                       textAlign: TextAlign.justify,

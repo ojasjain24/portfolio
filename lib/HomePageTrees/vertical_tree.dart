@@ -6,7 +6,7 @@ import 'package:portfolio/HomePageTrees/Common.dart';
 import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../appConstents.dart';
+import '../app_constants.dart';
 
 Widget widgetTreeVertical(size) {
   return Container(
@@ -124,7 +124,7 @@ Widget widgetTreeVertical(size) {
                       launch(e.link);
                     },
                     child: Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: Image.asset(
                         e.imageAddress,
                         height: 50,
@@ -137,7 +137,7 @@ Widget widgetTreeVertical(size) {
           const SizedBox(
             height: 40,
           ),
-          WorksTree(padding: 0, screenSize: size),
+          worksTree(padding: 0, screenSize: size),
         ],
       ),
     ),

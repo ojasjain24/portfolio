@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:portfolio/appConstents.dart';
+import 'package:portfolio/app_constants.dart';
 import 'package:portfolio/models/education_model.dart';
 import 'package:portfolio/models/generic_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,28 +8,29 @@ import 'package:url_launcher/url_launcher.dart';
 import 'models/WorksModel.dart';
 import 'models/icon_link_model.dart';
 
-class buildsCard extends StatefulWidget {
-  buildsCard({
+class BuildsCard extends StatefulWidget {
+
+  const BuildsCard({Key? key,
     this.assetImage,
     required this.name,
     required this.description,
     required this.links,
     this.isCurrent = false,
-  });
+  }) : super(key: key);
 
-  String? assetImage;
-  String name;
-  String description;
-  List<IconLinkModel>? links;
-  bool isCurrent;
+  final String? assetImage;
+  final String name;
+  final String description;
+  final List<IconLinkModel>? links;
+  final bool isCurrent;
 
   @override
   State<StatefulWidget> createState() {
-    return buildsCardState();
+    return BuildsCardState();
   }
 }
 
-class buildsCardState extends State<buildsCard> {
+class BuildsCardState extends State<BuildsCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white54;
   Color titleSpreadColor = Colors.transparent;

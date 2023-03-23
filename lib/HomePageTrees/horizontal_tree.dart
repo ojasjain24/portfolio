@@ -59,7 +59,7 @@ Widget widgetTreeHorizontal(size) {
                                 launch(e.link);
                               },
                               child: Padding(
-                                  padding: EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(5),
                                   child: Image.asset(
                                     e.imageAddress,
                                     height: 50,
@@ -71,13 +71,13 @@ Widget widgetTreeHorizontal(size) {
                   ],
                 ),
               ),
-              mainImage(size: Size(0.95 * size.width, 0.95 * size.height)),
+              MainImage(size: Size(0.95 * size.width, 0.95 * size.height)),
             ],
           ),
           const SizedBox(
             height: 10,
           ),
-          WorksTree(padding: 40, screenSize: size),
+          worksTree(padding: 40, screenSize: size),
         ],
       ),
     ),
@@ -99,20 +99,20 @@ class TriangleClipperHorizontal extends CustomClipper<Path> {
   bool shouldReclip(TriangleClipperHorizontal oldClipper) => false;
 }
 
-class mainImage extends StatefulWidget {
-  mainImage({required this.size});
+class MainImage extends StatefulWidget {
+  const MainImage({Key? key, required this.size}) : super(key: key);
 
-  Size size;
+  final Size size;
 
   @override
   State<StatefulWidget> createState() {
-    return mainImageState();
+    return MainImageState();
   }
 }
 
 //TODO change color of frame on tap.
 
-class mainImageState extends State<mainImage> {
+class MainImageState extends State<MainImage> {
   @override
   Widget build(BuildContext context) {
     Color triangleColor =

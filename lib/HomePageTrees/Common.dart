@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 
-import '../appConstents.dart';
+import '../app_constants.dart';
 import '../cards.dart';
 import '../data_file.dart';
 
-Widget WorksTree({double padding = 20, required Size screenSize}) {
+Widget worksTree({double padding = 20, required Size screenSize}) {
   return Container(
     padding: EdgeInsets.all(padding),
     child: Column(
@@ -40,7 +40,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
               ),
               ...PortfolioDetails.skillsList
                   .map((e) => Tooltip(
-                        child: expandOnHover(skillIcon: e.imageAddress),
+                        child: ExpandOnHover(skillIcon: e.imageAddress),
                         message: e.link,
                       ))
                   .toList(),
@@ -53,7 +53,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         const SizedBox(
           height: 40,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           child: Align(
             alignment: Alignment.center,
@@ -67,7 +67,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         const SizedBox(
           height: 30,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           child: Wrap(
             runSpacing: 20,
@@ -76,7 +76,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               ...(PortfolioDetails.experienceList
-                  .map((e) => buildsCard(
+                  .map((e) => BuildsCard(
                         assetImage: e.assetImage,
                         name: e.name,
                         description: e.description,
@@ -101,7 +101,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         const SizedBox(
           height: 30,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           child: Wrap(
             runSpacing: 20,
@@ -133,7 +133,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         const SizedBox(
           height: 30,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           child: Wrap(
             runSpacing: 20,
@@ -167,7 +167,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         const SizedBox(
           height: 30,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           child: Wrap(
             runSpacing: 20,
@@ -195,18 +195,18 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
   );
 }
 
-class expandOnHover extends StatefulWidget {
-  expandOnHover({required this.skillIcon});
+class ExpandOnHover extends StatefulWidget {
+  const ExpandOnHover({Key? key, required this.skillIcon}) : super(key: key);
 
-  String skillIcon;
+  final String skillIcon;
 
   @override
   State<StatefulWidget> createState() {
-    return expandOnHoverState();
+    return ExpandOnHoverState();
   }
 }
 
-class expandOnHoverState extends State<expandOnHover> {
+class ExpandOnHoverState extends State<ExpandOnHover> {
   double iconSize = 50;
   double scale = 1.0;
 
@@ -228,7 +228,7 @@ class expandOnHoverState extends State<expandOnHover> {
               }
             },
             child: Padding(
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Transform.scale(
                 scale: scale,
                 child: SvgPicture.network(

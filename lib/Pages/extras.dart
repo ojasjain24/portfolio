@@ -3,11 +3,13 @@ import 'package:neon_widgets/neon_widgets.dart';
 import 'package:portfolio/Pages/home_page.dart';
 import 'package:portfolio/cards.dart';
 
-import '../appConstents.dart';
+import '../app_constants.dart';
 import '../data_file.dart';
 import 'education_page.dart';
 
 class Extras extends StatefulWidget {
+  const Extras({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return ExtrasState();
@@ -103,8 +105,8 @@ class ExtrasState extends State<Extras> {
                 ),
                 Container(
                   padding: size.width > 850
-                      ? EdgeInsets.symmetric(horizontal: 200)
-                      : EdgeInsets.symmetric(horizontal: 30),
+                      ? const EdgeInsets.symmetric(horizontal: 200)
+                      : const EdgeInsets.symmetric(horizontal: 30),
                   alignment: Alignment.center,
                   child: NeonText(
                     textAlign: TextAlign.justify,
@@ -133,8 +135,8 @@ class ExtrasState extends State<Extras> {
                         .map(
                           (e) => Container(
                             padding: size.width > 850
-                                ? EdgeInsets.symmetric(horizontal: 200)
-                                : EdgeInsets.symmetric(horizontal: 30),
+                                ? const EdgeInsets.symmetric(horizontal: 200)
+                                : const EdgeInsets.symmetric(horizontal: 30),
                             child: featureCard(
                               model: e,
                             ),
