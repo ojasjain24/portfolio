@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/HomePageTrees/horizontal_tree.dart';
 import 'package:portfolio/HomePageTrees/vertical_tree.dart';
-import 'package:portfolio/Pages/Extras.dart';
+import 'package:portfolio/Pages/extras.dart';
 import 'package:portfolio/Pages/education_page.dart';
-import 'package:portfolio/appConstents.dart';
+import 'package:portfolio/app_constants.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -69,7 +69,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       hoverColor: Colors.white30,
                       onTap: () {
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (ctx) => Extras()));
+                            MaterialPageRoute(builder: (ctx) => const Extras()));
                       },
                       child: const Text(
                         "More",

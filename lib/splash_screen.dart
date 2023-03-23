@@ -50,20 +50,20 @@ class SplashScreenState extends State<SplashScreen>
                 Container(
                   alignment: Alignment.bottomCenter,
                   child: Stack(
-                    children: [
-                      oFlickerNeonPoint(
+                    children: const [
+                      FlickerNeonPoint(
                         spreadColor: Colors.blue,
                         flickerTimeInMilliSeconds: 500,
                         lightBlurRadius: 300,
                         lightSpreadRadius: 100,
                       ),
-                      oFlickerNeonPoint(
+                      FlickerNeonPoint(
                         spreadColor: Colors.green,
                         flickerTimeInMilliSeconds: 500,
                         lightBlurRadius: 300,
                         lightSpreadRadius: 100,
                       ),
-                      oFlickerNeonPoint(
+                      FlickerNeonPoint(
                         spreadColor: Colors.red,
                         flickerTimeInMilliSeconds: 500,
                         lightBlurRadius: 300,

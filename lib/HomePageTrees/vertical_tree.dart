@@ -6,7 +6,7 @@ import 'package:portfolio/HomePageTrees/Common.dart';
 import 'package:portfolio/data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../appConstents.dart';
+import '../app_constants.dart';
 
 Widget widgetTreeVertical(size) {
   return Container(
@@ -27,7 +27,7 @@ Widget widgetTreeVertical(size) {
               const SizedBox(
                 height: 10,
               ),
-              oFlickerNeonText(
+              FlickerNeonText(
                 flickerTimeInMilliSeconds: 1000,
                 randomFlicker: true,
                 text: PortfolioDetails.myName,
@@ -47,7 +47,7 @@ Widget widgetTreeVertical(size) {
                     Container(
                       padding: EdgeInsets.fromLTRB(0, size.height / 5, 0, 0),
                       alignment: Alignment.topCenter,
-                      child: oNeonLine(
+                      child: NeonLine(
                         lineWidth: size.width,
                         lineHeight: 3,
                         lightSpreadRadius: 2,
@@ -71,7 +71,7 @@ Widget widgetTreeVertical(size) {
                     Positioned(
                       bottom: 0,
                       right: size.width / 2 - 20,
-                      child: oNeonLine(
+                      child: NeonLine(
                         transformAlignment: Alignment.bottomRight,
                         transform: Matrix4.rotationZ(atan(2.2)),
                         lineWidth: size.width / sin(atan(2.2)),
@@ -85,7 +85,7 @@ Widget widgetTreeVertical(size) {
                     Positioned(
                       bottom: 0,
                       right: size.width / 2 - 20,
-                      child: oNeonLine(
+                      child: NeonLine(
                         transformAlignment: Alignment.bottomRight,
                         transform: Matrix4.rotationZ(
                           pi - atan(2.2),
@@ -104,7 +104,7 @@ Widget widgetTreeVertical(size) {
               const SizedBox(
                 height: 40,
               ),
-              oNeonText(
+              NeonText(
                 text: PortfolioDetails.bio,
                 textSize: 25,
                 blurRadius: 10,
@@ -124,7 +124,7 @@ Widget widgetTreeVertical(size) {
                       launch(e.link);
                     },
                     child: Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: Image.asset(
                         e.imageAddress,
                         height: 50,
@@ -137,7 +137,7 @@ Widget widgetTreeVertical(size) {
           const SizedBox(
             height: 40,
           ),
-          WorksTree(padding: 0, screenSize: size),
+          worksTree(padding: 0, screenSize: size),
         ],
       ),
     ),
