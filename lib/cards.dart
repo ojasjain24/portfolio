@@ -68,8 +68,8 @@ class buildsCardState extends State<buildsCard> {
       onTap: () {
         widget.links != null ? launch(widget.links![0].link) : null;
       },
-      child: oNeonContainer(
-        clipBehaviour: Clip.antiAlias,
+      child: NeonContainer(
+        clipBehavior: Clip.antiAlias,
         lightSpreadRadius: size.width > 850 ? 15 : 4,
         lightBlurRadius: size.width > 850 ? 45 : 10,
         borderWidth: 3,
@@ -108,7 +108,7 @@ class buildsCardState extends State<buildsCard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      oNeonText(
+                      NeonText(
                         blurRadius: 10,
                         isSoftWrap: true,
                         textAlign: TextAlign.center,
@@ -120,7 +120,7 @@ class buildsCardState extends State<buildsCard> {
                       const SizedBox(
                         height: 10,
                       ),
-                      oNeonText(
+                      NeonText(
                         textAlign: TextAlign.justify,
                         text: widget.description,
                         maxLine: 6,
@@ -224,7 +224,7 @@ class worksCardState extends State<worksCard> {
       onTap: () {
         launch(widget.worksModel.link ?? "");
       },
-      child: oNeonContainer(
+      child: NeonContainer(
         width: 456,
         height: 260,
         spreadColor: spreadColor,
@@ -264,7 +264,7 @@ class worksCardState extends State<worksCard> {
                     Container(
                       alignment: Alignment.centerLeft,
                       width: size.width < 455 ? size.width - 110 : 455 - 150,
-                      child: oNeonText(
+                      child: NeonText(
                         textAlign: TextAlign.start,
                         text: widget.worksModel.companyName,
                         fontWeight: FontWeight.bold,
@@ -289,7 +289,7 @@ class worksCardState extends State<worksCard> {
                       child: Container(
                         alignment: Alignment.centerLeft,
                         width: 300,
-                        child: oNeonText(
+                        child: NeonText(
                           textOverflow: TextOverflow.ellipsis,
                           maxLine: 2,
                           textAlign: TextAlign.start,
@@ -305,7 +305,7 @@ class worksCardState extends State<worksCard> {
                     const SizedBox(
                       height: 2,
                     ),
-                    oNeonText(
+                    NeonText(
                       text:
                           "${widget.worksModel.startDate} - ${widget.worksModel.endDate}",
                       spreadColor: discpSpreadColor,
@@ -320,7 +320,7 @@ class worksCardState extends State<worksCard> {
             const SizedBox(
               height: 10,
             ),
-            oNeonText(
+            NeonText(
               maxLine: size.width > 850 ? 6 : 5,
               textOverflow: TextOverflow.ellipsis,
               spreadColor: discpSpreadColor,
@@ -413,7 +413,7 @@ class educationCardState extends State<educationCard> {
       onTap: () {
         widget.model.link != "" ? launch(widget.model.link) : null;
       },
-      child: oNeonContainer(
+      child: NeonContainer(
         lightSpreadRadius: size.width > 850 ? 15 : 4,
         lightBlurRadius: size.width > 850 ? 45 : 10,
         spreadColor: spreadColor,
@@ -477,33 +477,33 @@ class educationCardState extends State<educationCard> {
                       children: [
                         ...(widget.model.degrees!.map((e) => Wrap(
                               children: [
-                                oNeonText(
+                                NeonText(
                                     text: e.degree,
                                     fontWeight: FontWeight.bold,
                                     textColor: degreeColor,
                                     spreadColor: degreeSpreadColor,
                                     textSize: size.width > 850 ? 30 : 20),
-                                oNeonText(
+                                NeonText(
                                   text: " | ",
                                   fontWeight: FontWeight.bold,
                                   textSize: size.width > 850 ? 30 : 20,
                                   textColor: courseColor,
                                   spreadColor: courseSpreadColor,
                                 ),
-                                oNeonText(
+                                NeonText(
                                   text: e.level,
                                   fontWeight: FontWeight.normal,
                                   textColor: courseColor,
                                   spreadColor: courseSpreadColor,
                                   textSize: size.width > 850 ? 30 : 20,
                                 ),
-                                oNeonText(
+                                NeonText(
                                     text: " | ",
                                     fontWeight: FontWeight.bold,
                                     textSize: size.width > 850 ? 30 : 20,
                                     textColor: courseColor,
                                     spreadColor: courseSpreadColor),
-                                oNeonText(
+                                NeonText(
                                   text: e.score,
                                   fontWeight: FontWeight.w300,
                                   textColor: courseColor,
@@ -594,7 +594,7 @@ class certificateCardState extends State<certificateCard> {
       onTap: () {
         launch(widget.model.link);
       },
-      child: oNeonContainer(
+      child: NeonContainer(
         lightSpreadRadius: size.width > 850 ? 15 : 4,
         lightBlurRadius: size.width > 850 ? 45 : 10,
         spreadColor: spreadColor,
@@ -650,19 +650,19 @@ class certificateCardState extends State<certificateCard> {
                     children: [
                       ...(widget.model.degrees!.map((e) => Wrap(
                             children: [
-                              oNeonText(
+                              NeonText(
                                   text: e.degree,
                                   fontWeight: FontWeight.bold,
                                   textColor: orgColor,
                                   spreadColor: orgSpreadColor,
                                   textSize: size.width > 850 ? 20 : 15),
-                              oNeonText(
+                              NeonText(
                                   text: " | ",
                                   fontWeight: FontWeight.bold,
                                   textSize: size.width > 850 ? 20 : 15,
                                   textColor: providerColor,
                                 spreadColor: providerSpreadColor,),
-                              oNeonText(
+                              NeonText(
                                   text: e.level,
                                   fontWeight: FontWeight.normal,
                                   textColor: providerColor,
@@ -710,7 +710,7 @@ class featureCardState extends State<featureCard> {
       onTap: () {
         widget.model.link == null ? null : launch(widget.model.link ?? "");
       },
-      child: oNeonContainer(
+      child: NeonContainer(
         lightSpreadRadius: size.width > 850 ? 10 : 4,
         lightBlurRadius: size.width > 850 ? 30 : 10,
         spreadColor: Colors.indigo.withOpacity(0.7),

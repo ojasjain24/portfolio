@@ -92,7 +92,7 @@ class ExtrasState extends State<Extras> {
                 ),
                 Align(
                   alignment: Alignment.center,
-                  child: oNeonText(
+                  child: NeonText(
                     text: "A bit more about me!",
                     spreadColor: MainSpreadColor,
                     textSize: HeadingFontSize,
@@ -106,7 +106,7 @@ class ExtrasState extends State<Extras> {
                       ? EdgeInsets.symmetric(horizontal: 200)
                       : EdgeInsets.symmetric(horizontal: 30),
                   alignment: Alignment.center,
-                  child: oNeonText(
+                  child: NeonText(
                     textAlign: TextAlign.justify,
                     text: PortfolioDetails.extrasHeadLine,
                     spreadColor: MainSpreadColor,
@@ -118,7 +118,7 @@ class ExtrasState extends State<Extras> {
                 ),
                 Align(
                   alignment: Alignment.center,
-                  child: oNeonText(
+                  child: NeonText(
                     text: "Achievements",
                     spreadColor: MainSpreadColor,
                     textSize: HeadingFontSize - 10,
@@ -148,7 +148,7 @@ class ExtrasState extends State<Extras> {
                 ),
                 Align(
                   alignment: Alignment.center,
-                  child: oNeonText(
+                  child: NeonText(
                     text: "Hobbies",
                     spreadColor: MainSpreadColor,
                     textSize: HeadingFontSize - 10,
@@ -171,7 +171,7 @@ class ExtrasState extends State<Extras> {
                             .map(
                               (e) => Tooltip(
                                 message: e.name,
-                                child: oNeonContainer(
+                                child: NeonContainer(
                                   containerColor: Colors.white,
                                   margin: const EdgeInsets.all(10),
                                   padding: const EdgeInsets.all(10),

@@ -18,7 +18,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         ),
         Align(
           alignment: Alignment.center,
-          child: oNeonText(
+          child: NeonText(
             text: "Tools and Technologies Inventory",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
@@ -57,7 +57,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
           width: screenSize.width,
           child: Align(
             alignment: Alignment.center,
-            child: oNeonText(
+            child: NeonText(
               text: "Projects",
               spreadColor: MainSpreadColor,
               textSize: HeadingFontSize,
@@ -92,7 +92,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         ),
         Align(
           alignment: Alignment.center,
-          child: oNeonText(
+          child: NeonText(
             text: "Technical Work Experiences",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
@@ -124,7 +124,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         ),
         Align(
           alignment: Alignment.center,
-          child: oNeonText(
+          child: NeonText(
             text: "Non-technical Work Experiences",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,
@@ -158,7 +158,7 @@ Widget WorksTree({double padding = 20, required Size screenSize}) {
         ),
         Align(
           alignment: Alignment.center,
-          child: oNeonText(
+          child: NeonText(
             text: "Volunteer Experience",
             spreadColor: MainSpreadColor,
             textSize: HeadingFontSize,

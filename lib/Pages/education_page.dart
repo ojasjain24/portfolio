@@ -103,7 +103,7 @@ class EducationPageState extends State<EducationPage> {
                         ? EdgeInsets.symmetric(horizontal: 200)
                         : EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
-                    child: oNeonText(
+                    child: NeonText(
                       text: "Education",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,
@@ -115,7 +115,7 @@ class EducationPageState extends State<EducationPage> {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     alignment: Alignment.center,
-                    child: oNeonText(
+                    child: NeonText(
                       textAlign: TextAlign.justify,
                       text: PortfolioDetails.educationHeadLine,
                       spreadColor: MainSpreadColor,
@@ -127,7 +127,7 @@ class EducationPageState extends State<EducationPage> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: oNeonText(
+                    child: NeonText(
                       text: "Degree",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,
@@ -152,7 +152,7 @@ class EducationPageState extends State<EducationPage> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: oNeonText(
+                    child: NeonText(
                       text: "Course Certificates",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,
@@ -177,7 +177,7 @@ class EducationPageState extends State<EducationPage> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: oNeonText(
+                    child: NeonText(
                       text: "Event Certificates",
                       spreadColor: MainSpreadColor,
                       textSize: HeadingFontSize,

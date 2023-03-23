@@ -29,7 +29,7 @@ Widget widgetTreeHorizontal(size) {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        oFlickerNeonText(
+                        FlickerNeonText(
                           flickerTimeInMilliSeconds: 1000,
                           randomFlicker: false,
                           text: PortfolioDetails.myName,
@@ -41,7 +41,7 @@ Widget widgetTreeHorizontal(size) {
                         const SizedBox(
                           height: 20,
                         ),
-                        oNeonText(
+                        NeonText(
                           text: PortfolioDetails.bio,
                           textSize: 30,
                           blurRadius: 20,
@@ -130,7 +130,7 @@ class mainImageState extends State<mainImage> {
             clipBehavior: Clip.none,
             padding: EdgeInsets.fromLTRB(0, widget.size.height / 3, 0, 0),
             alignment: Alignment.topCenter,
-            child: oNeonLine(
+            child: NeonLine(
               lineWidth: widget.size.width / 2.5,
               lineHeight: 3,
               lightSpreadRadius: 10,
@@ -166,7 +166,7 @@ class mainImageState extends State<mainImage> {
           Positioned(
             bottom: 0, // size.height*5 /12,
             right: widget.size.width / 4,
-            child: oNeonLine(
+            child: NeonLine(
               transformAlignment: Alignment.bottomRight,
               transform: Matrix4.rotationZ(atan(
                 4.166 * (widget.size.height / widget.size.width),
@@ -185,7 +185,7 @@ class mainImageState extends State<mainImage> {
           Positioned(
             bottom: 0, // size.height*5 /12,
             right: widget.size.width / 4,
-            child: oNeonLine(
+            child: NeonLine(
               transformAlignment: Alignment.bottomRight,
               transform: Matrix4.rotationZ(pi -
                   atan(
