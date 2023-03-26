@@ -74,8 +74,8 @@ class EducationPageState extends State<EducationPage> {
                     child: InkWell(
                       hoverColor: Colors.white30,
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (ctx) => const Extras()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => const Extras()));
                       },
                       child: const Text(
                         "More",
@@ -140,7 +140,7 @@ class EducationPageState extends State<EducationPage> {
                     children: [
                       ...(PortfolioDetails.educationList
                           .map(
-                            (e) => educationCard(
+                            (e) => EducationCard(
                               model: e,
                             ),
                           )
@@ -165,7 +165,7 @@ class EducationPageState extends State<EducationPage> {
                     children: [
                       ...(PortfolioDetails.certificateList
                           .map(
-                            (e) => certificateCard(
+                            (e) => CertificateCard(
                               model: e,
                             ),
                           )
@@ -190,7 +190,7 @@ class EducationPageState extends State<EducationPage> {
                     children: [
                       ...(PortfolioDetails.eventCertificateList
                           .map(
-                            (e) => certificateCard(
+                            (e) => CertificateCard(
                               model: e,
                             ),
                           )

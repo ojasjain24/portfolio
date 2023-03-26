@@ -184,7 +184,7 @@ class WorksCard extends StatefulWidget {
   }
 }
 
-class WorksCardState extends State<worksCard> {
+class WorksCardState extends State<WorksCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white70;
   Color titleSpreadColor = Colors.transparent;
@@ -352,7 +352,7 @@ class EducationCard extends StatefulWidget {
   }
 }
 
-class EducationCardState extends State<educationCard> {
+class EducationCardState extends State<EducationCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white54;
   Color titleSpreadColor = Colors.transparent;
@@ -539,7 +539,7 @@ class CertificateCard extends StatefulWidget {
   }
 }
 
-class CertificateCardState extends State<certificateCard> {
+class CertificateCardState extends State<CertificateCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white54;
   Color titleSpreadColor = Colors.transparent;
@@ -697,7 +697,7 @@ class FeatureCard extends StatefulWidget {
   }
 }
 
-class FeatureCardState extends State<featureCard> {
+class FeatureCardState extends State<FeatureCard> {
   Color spreadColor = CardSpreadColor;
   Color borderColor = Colors.white;
   Color titleSpreadColor = CardTitleColor;
