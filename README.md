@@ -80,7 +80,7 @@ As soon as you land on home page, you see a large image of yourself, to change t
 # Deployment 📦
 
 - Once you are done with your setup and have successfully completed all steps above, you need to put your website online!
-- I personally have deployed deploy my portfolio using firebase, it only provides `.web.app` domain name, but you can use any doimain name provider to deploy you portfolio on any domain.
+- I personally have deployed my portfolio using firebase, but it only provides `.web.app` domain name. You can use any doimain name provider to deploy you portfolio on any domain.
 
 
 # Contribute : 
