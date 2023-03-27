@@ -110,7 +110,7 @@ Widget worksTree({double padding = 20, required Size screenSize}) {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               ...(PortfolioDetails.techWorksList
-                  .map((e) => worksCard(
+                  .map((e) => WorksCard(
                         worksModel: e,
                         screenSize: screenSize,
                         parentPadding: padding,
@@ -143,7 +143,7 @@ Widget worksTree({double padding = 20, required Size screenSize}) {
             children: [
               ...(PortfolioDetails.leadWorksList
                   .map(
-                    (e) => worksCard(
+                    (e) => WorksCard(
                       worksModel: e,
                       screenSize: screenSize,
                       parentPadding: padding,
@@ -177,7 +177,7 @@ Widget worksTree({double padding = 20, required Size screenSize}) {
             children: [
               ...(PortfolioDetails.volunteerWorksList
                   .map(
-                    (e) => worksCard(
+                    (e) => WorksCard(
                       worksModel: e,
                       screenSize: screenSize,
                       parentPadding: padding,

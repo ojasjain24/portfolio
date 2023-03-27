@@ -137,7 +137,7 @@ class ExtrasState extends State<Extras> {
                             padding: size.width > 850
                                 ? const EdgeInsets.symmetric(horizontal: 200)
                                 : const EdgeInsets.symmetric(horizontal: 30),
-                            child: featureCard(
+                            child: FeatureCard(
                               model: e,
                             ),
                           ),
