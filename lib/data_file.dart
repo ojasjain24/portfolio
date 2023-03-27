@@ -129,7 +129,8 @@ class PortfolioDetails {
       endDate: "October 2022",
       startDate: "May 2022",
       title: "Software development Intern",
-      description: "Worked in the frontend development team and contributed to multiple projects. Worked on geojsons, created Dashboards and Storyboards, Plotted data on maps and graphs, and many more things.",
+      description:
+          "Worked in the frontend development team and contributed to multiple projects. Worked on geojsons, created Dashboards and Storyboards, Plotted data on maps and graphs, and many more things.",
       isCurrent: false,
     ),
     WorksModel(
@@ -161,7 +162,7 @@ class PortfolioDetails {
       title: "R&D intern",
       logo: "assets/images/samsung.png",
       description:
-      "Was part of 'DNN development for Human Pose Estimation' work-let. Researched on DNN and CNN to create the best possible Model.",
+          "Was part of 'DNN development for Human Pose Estimation' work-let. Researched on DNN and CNN to create the best possible Model.",
     ),
     WorksModel(
       link: "https://developersmonk.com/",

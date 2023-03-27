@@ -9,8 +9,8 @@ import 'models/WorksModel.dart';
 import 'models/icon_link_model.dart';
 
 class BuildsCard extends StatefulWidget {
-
-  const BuildsCard({Key? key,
+  const BuildsCard({
+    Key? key,
     this.assetImage,
     required this.name,
     required this.description,
@@ -167,24 +167,25 @@ class BuildsCardState extends State<BuildsCard> {
   }
 }
 
-class worksCard extends StatefulWidget {
-  worksCard({
+class WorksCard extends StatefulWidget {
+  const WorksCard({
+    Key? key,
     required this.worksModel,
     required this.screenSize,
     required this.parentPadding,
-  });
+  }) : super(key: key);
 
-  WorksModel worksModel;
-  Size screenSize;
-  double parentPadding;
+  final WorksModel worksModel;
+  final Size screenSize;
+  final double parentPadding;
 
   @override
   State<StatefulWidget> createState() {
-    return worksCardState();
+    return WorksCardState();
   }
 }
 
-class worksCardState extends State<worksCard> {
+class WorksCardState extends State<WorksCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white70;
   Color titleSpreadColor = Colors.transparent;
@@ -339,20 +340,21 @@ class worksCardState extends State<worksCard> {
   }
 }
 
-class educationCard extends StatefulWidget {
-  educationCard({
+class EducationCard extends StatefulWidget {
+  const EducationCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  InstituteModel model;
+  final InstituteModel model;
 
   @override
   State<StatefulWidget> createState() {
-    return educationCardState();
+    return EducationCardState();
   }
 }
 
-class educationCardState extends State<educationCard> {
+class EducationCardState extends State<EducationCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white54;
   Color titleSpreadColor = Colors.transparent;
@@ -470,7 +472,7 @@ class educationCardState extends State<educationCard> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     width:
                         size.width < 850 ? size.width - 200 : size.width - 480,
                     child: Column(
@@ -526,20 +528,21 @@ class educationCardState extends State<educationCard> {
   }
 }
 
-class certificateCard extends StatefulWidget {
-  certificateCard({
+class CertificateCard extends StatefulWidget {
+  const CertificateCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  InstituteModel model;
+  final InstituteModel model;
 
   @override
   State<StatefulWidget> createState() {
-    return certificateCardState();
+    return CertificateCardState();
   }
 }
 
-class certificateCardState extends State<certificateCard> {
+class CertificateCardState extends State<CertificateCard> {
   Color spreadColor = Colors.transparent;
   Color borderColor = Colors.white54;
   Color titleSpreadColor = Colors.transparent;
@@ -630,7 +633,7 @@ class certificateCardState extends State<certificateCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     child: Text(
                       widget.model.name,
                       maxLines: 2,
@@ -658,11 +661,12 @@ class certificateCardState extends State<certificateCard> {
                                   spreadColor: orgSpreadColor,
                                   textSize: size.width > 850 ? 20 : 15),
                               NeonText(
-                                  text: " | ",
-                                  fontWeight: FontWeight.bold,
-                                  textSize: size.width > 850 ? 20 : 15,
-                                  textColor: providerColor,
-                                spreadColor: providerSpreadColor,),
+                                text: " | ",
+                                fontWeight: FontWeight.bold,
+                                textSize: size.width > 850 ? 20 : 15,
+                                textColor: providerColor,
+                                spreadColor: providerSpreadColor,
+                              ),
                               NeonText(
                                   text: e.level,
                                   fontWeight: FontWeight.normal,
@@ -683,20 +687,21 @@ class certificateCardState extends State<certificateCard> {
   }
 }
 
-class featureCard extends StatefulWidget {
-  featureCard({
+class FeatureCard extends StatefulWidget {
+  const FeatureCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  GenericModel model;
+  final GenericModel model;
 
   @override
   State<StatefulWidget> createState() {
-    return featureCardState();
+    return FeatureCardState();
   }
 }
 
-class featureCardState extends State<featureCard> {
+class FeatureCardState extends State<FeatureCard> {
   Color spreadColor = CardSpreadColor;
   Color borderColor = Colors.white;
   Color titleSpreadColor = CardTitleColor;
