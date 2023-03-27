@@ -168,15 +168,16 @@ class BuildsCardState extends State<BuildsCard> {
 }
 
 class WorksCard extends StatefulWidget {
-  WorksCard({
+  const WorksCard({
+    Key? key,
     required this.worksModel,
     required this.screenSize,
     required this.parentPadding,
-  });
+  }) : super(key: key);
 
-  WorksModel worksModel;
-  Size screenSize;
-  double parentPadding;
+  final WorksModel worksModel;
+  final Size screenSize;
+  final double parentPadding;
 
   @override
   State<StatefulWidget> createState() {
@@ -340,11 +341,12 @@ class WorksCardState extends State<WorksCard> {
 }
 
 class EducationCard extends StatefulWidget {
-  EducationCard({
+  const EducationCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  InstituteModel model;
+  final InstituteModel model;
 
   @override
   State<StatefulWidget> createState() {
@@ -470,7 +472,7 @@ class EducationCardState extends State<EducationCard> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     width:
                         size.width < 850 ? size.width - 200 : size.width - 480,
                     child: Column(
@@ -527,11 +529,12 @@ class EducationCardState extends State<EducationCard> {
 }
 
 class CertificateCard extends StatefulWidget {
-  CertificateCard({
+  const CertificateCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  InstituteModel model;
+  final InstituteModel model;
 
   @override
   State<StatefulWidget> createState() {
@@ -630,7 +633,7 @@ class CertificateCardState extends State<CertificateCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     child: Text(
                       widget.model.name,
                       maxLines: 2,
@@ -685,11 +688,12 @@ class CertificateCardState extends State<CertificateCard> {
 }
 
 class FeatureCard extends StatefulWidget {
-  FeatureCard({
+  const FeatureCard({
+    Key? key,
     required this.model,
-  });
+  }) : super(key: key);
 
-  GenericModel model;
+  final GenericModel model;
 
   @override
   State<StatefulWidget> createState() {

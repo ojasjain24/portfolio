@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/HomePageTrees/horizontal_tree.dart';
 import 'package:portfolio/HomePageTrees/vertical_tree.dart';
-import 'package:portfolio/Pages/extras.dart';
 import 'package:portfolio/Pages/education_page.dart';
+import 'package:portfolio/Pages/extras.dart';
 import 'package:portfolio/app_constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -68,8 +68,8 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     child: InkWell(
                       hoverColor: Colors.white30,
                       onTap: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (ctx) => const Extras()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => const Extras()));
                       },
                       child: const Text(
                         "More",
