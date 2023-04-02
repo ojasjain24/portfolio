@@ -29,7 +29,7 @@ Widget widgetTreeVertical(size) {
               ),
               FlickerNeonText(
                 flickerTimeInMilliSeconds: 1000,
-                randomFlicker: true,
+                randomFlicker: false,
                 text: PortfolioDetails.myName,
                 fontFamily: 'Monoton',
                 textSize: 64,
