@@ -10,10 +10,10 @@
 
 <p align="center"> 
     <a href="https://ojas-jain.web.app" target="_blank">
-    <img src="https://github.com/ojasjain24/portfolio/blob/master/Demo/Screenshot%202023-03-26%20105106.jpg"></img>
+    <img src="https://github.com/ojasjain24/portfolio/blob/master/Demo/Screenshot%202023-04-03%20013945.jpg"></img>
   </a>
   <a href="https://ojas-jain.web.app" target="_blank">
-    <img src="https://github.com/ojasjain24/portfolio/blob/master/Demo/Ojas%20Jain%20-%20Google%20Chrome%2026-03-2023%2011_23_22%20(2).png"></img>
+    <img src="https://github.com/ojasjain24/portfolio/blob/master/Demo/Ojas%20Jain%20-%20Google%20Chrome%2003-04-2023%2001_40_34%20(2).png"></img>
   </a>
 </p>
 
