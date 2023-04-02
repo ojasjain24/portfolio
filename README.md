@@ -75,7 +75,7 @@ You can change the personal information, experience, education, social media, ce
 
 ### Main Image
 
-As soon as you land on home page, you see a large image of yourself, to change that image, go to `assets/images/` there you will find a image named as `myPic.webp`, you need to replace that file with your own image. Note : Only webp format image is supported for this particular section as it maintains picture quality while reducing its size significantly. 
+As soon as you land on home page, you see a large image of yourself, to change that image, go to `assets/images/` there you will find a image named as `myPic.webp`, you need to replace that file with your own image. Note : It is recommended to use webp format image for this particular section as it maintains picture quality while reducing its size significantly and hence will load quickly. 
 
 # Deployment 📦
 
