@@ -75,12 +75,12 @@ You can change the personal information, experience, education, social media, ce
 
 ### Main Image
 
-As soon as you land on home page, you see a large image of yourself, to change that image, go to `assets/images/` there you will find a image named as `myPic.webp`, you need to replace that file with your own image. Note : Only webp format image is supported for this particular section as it maintains picture quality while reducing its size significantly. 
+As soon as you land on home page, you see a large image of yourself, to change that image, go to `assets/images/` there you will find a image named as `myPic.webp`, you need to replace that file with your own image. Note : It is recommended to use webp format image for this particular section as it maintains picture quality while reducing its size significantly and hence will load quickly. 
 
 # Deployment 📦
 
 - Once you are done with your setup and have successfully completed all steps above, you need to put your website online!
-- I personally have deployed deploy my portfolio using firebase, it only provides `.web.app` domain name, but you can use any doimain name provider to deploy you portfolio on any domain.
+- I personally have deployed my portfolio on firebase. You can use any deployment platform like Heroku, Vercel, Firebase, DigtalOcean, AWS, etc. to deploy your portfolio.
 
 
 # Contribute : 
