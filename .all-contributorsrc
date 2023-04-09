@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Himanshu9271",
+      "name": "Himanshu Bharti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48318060?v=4",
+      "profile": "https://github.com/Himanshu9271",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "portfolio",
+  "projectOwner": "ojasjain24"
+}
