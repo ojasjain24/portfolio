@@ -7,15 +7,6 @@
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "Himanshu9271",
-      "name": "Himanshu Bharti",
-      "avatar_url": "https://avatars.githubusercontent.com/u/48318060?v=4",
-      "profile": "https://github.com/Himanshu9271",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
       "login": "ojasjain24",
       "name": "ojas",
       "avatar_url": "https://avatars.githubusercontent.com/u/59116312?v=4",
@@ -28,6 +19,15 @@
         "mentoring",
         "maintenance",
         "projectManagement"
+      ]
+    },
+    {
+      "login": "Himanshu9271",
+      "name": "Himanshu Bharti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48318060?v=4",
+      "profile": "https://github.com/Himanshu9271",
+      "contributions": [
+        "bug"
       ]
     },
     {
