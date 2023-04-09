@@ -1,6 +1,6 @@
 <p align="center"> 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
     <img src="https://github.com/ojasjain24/portfolio/blob/master/assets/images/neon_widgets_logo.png" align="center" height="150"></img>
 </p>
@@ -107,6 +107,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Himanshu9271"><img src="https://avatars.githubusercontent.com/u/48318060?v=4?s=100" width="100px;" alt="Himanshu Bharti"/><br /><sub><b>Himanshu Bharti</b></sub></a><br /><a href="https://github.com/ojasjain24/portfolio/issues?q=author%3AHimanshu9271" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ojas-jain.web.app/#/"><img src="https://avatars.githubusercontent.com/u/59116312?v=4?s=100" width="100px;" alt="ojas"/><br /><sub><b>ojas</b></sub></a><br /><a href="https://github.com/ojasjain24/portfolio/commits?author=ojasjain24" title="Code">💻</a> <a href="https://github.com/ojasjain24/portfolio/commits?author=ojasjain24" title="Documentation">📖</a> <a href="#ideas-ojasjain24" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ojasjain24/portfolio/commits?author=ojasjain24" title="Tests">⚠️</a> <a href="#mentoring-ojasjain24" title="Mentoring">🧑‍🏫</a> <a href="#maintenance-ojasjain24" title="Maintenance">🚧</a> <a href="#projectManagement-ojasjain24" title="Project Management">📆</a></td>
     </tr>
   </tbody>
 </table>
