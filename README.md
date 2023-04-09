@@ -95,8 +95,6 @@ As soon as you land on home page, you see a large image of yourself, to change t
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
