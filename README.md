@@ -1,4 +1,7 @@
 <p align="center"> 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
     <img src="https://github.com/ojasjain24/portfolio/blob/master/assets/images/neon_widgets_logo.png" align="center" height="150"></img>
 </p>
 
@@ -92,3 +95,25 @@ As soon as you land on home page, you see a large image of yourself, to change t
 3 : push your changes to dev branch
 
 4 : Give this repo a :star: star, it helps to increase the reach.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Himanshu9271"><img src="https://avatars.githubusercontent.com/u/48318060?v=4?s=100" width="100px;" alt="Himanshu Bharti"/><br /><sub><b>Himanshu Bharti</b></sub></a><br /><a href="https://github.com/ojasjain24/portfolio/issues?q=author%3AHimanshu9271" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
