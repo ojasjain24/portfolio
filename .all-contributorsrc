@@ -14,6 +14,21 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ojasjain24",
+      "name": "ojas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59116312?v=4",
+      "profile": "https://ojas-jain.web.app/#/",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "test",
+        "mentoring",
+        "maintenance",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
