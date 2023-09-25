@@ -36,8 +36,6 @@ class PortfolioDetails {
       "assets/images/dart.png",
       "https://pub.dev/packages/neon_widgets",
     ),
-    IconLinkModel("assets/images/instagram.png",
-        "https://www.instagram.com/casual_photography___/"),
   ];
 
   static List<BuildsModel> experienceList = [
@@ -495,6 +493,13 @@ class PortfolioDetails {
         name: "Mannequin challenge winner",
         description:
             "I was the part of winning team of mannequin challenge, that was conducted by Solasta 2k20.",
+        type: "Award"),
+    GenericModel(
+        name: "Photography awards",
+        description:
+        "Received a total of 65+ awards in photography contests, with some photos securing a rank in top 6% and scoring merit by Judges and Experts. ",
+        link:
+        "https://www.photocrowd.com/photographer-community/241531/awards/?utm_source=sendinblue&utm_campaign=803a_Achievements_bronze_-_Profile_views&utm_medium=email",
         type: "Award"),
   ];
 

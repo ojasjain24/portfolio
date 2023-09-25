@@ -712,56 +712,73 @@ class FeatureCardState extends State<FeatureCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return InkWell(
-      onTap: () {
-        widget.model.link == null ? null : launch(widget.model.link ?? "");
-      },
-      child: NeonContainer(
-        lightSpreadRadius: size.width > 850 ? 10 : 4,
-        lightBlurRadius: size.width > 850 ? 30 : 10,
-        spreadColor: Colors.indigo.withOpacity(0.7),
-        borderColor: borderColor,
-        width: size.width,
-        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        borderWidth: 2,
-        borderRadius: BorderRadius.circular(CardRadius),
-        containerColor: Colors.black87,
-        child: Container(
-          margin: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              RichText(
-                text: TextSpan(
-                    style: TextStyle(
-                      fontSize: size.width > 850 ? 30 : 25,
-                      color: borderColor,
-                      fontWeight: FontWeight.w700,
-                    ),
+    return NeonContainer(
+      lightSpreadRadius: size.width > 850 ? 10 : 4,
+      lightBlurRadius: size.width > 850 ? 30 : 10,
+      spreadColor: Colors.indigo.withOpacity(0.7),
+      borderColor: borderColor,
+      width: size.width,
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      borderWidth: 2,
+      borderRadius: BorderRadius.circular(CardRadius),
+      containerColor: Colors.black87,
+      child: Container(
+        margin: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                InkWell(
+                  onTap: () {
+                    widget.model.link == null
+                        ? null
+                        : launch(widget.model.link ?? "");
+                  },
+                  child: Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.end,
                     children: [
-                      TextSpan(
+                      NeonText(
                         text: widget.model.type + " | ",
-                        style: const TextStyle(color: Colors.indigo),
+                        fontWeight: FontWeight.w700,
+                        textSize: size.width > 850 ? 25 : 20,
+                        textColor: Colors.indigo,
+                        spreadColor: Colors.indigo,
                       ),
-                      TextSpan(
-                        text: widget.model.name,
-                      )
-                    ]),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                widget.model.description ?? "",
-                maxLines: 5,
-                softWrap: true,
-                style: TextStyle(
-                    fontSize: size.width > 850 ? 20 : 15,
-                    color: borderColor,
-                    fontWeight: FontWeight.w400),
-              ),
-            ],
-          ),
+                      NeonText(
+                          text: widget.model.name,
+                          maxLine: 3,
+                          textColor: Colors.white,
+                          spreadColor: Colors.white,
+                          textSize: size.width > 850 ? 20 : 15),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      widget.model.link != null
+                          ? Image.asset(
+                              "assets/images/link.png",
+                              width: size.width > 850 ? 30 : 25,
+                              height: size.width > 850 ? 30 : 25,
+                            )
+                          : const SizedBox(height: 0),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              widget.model.description ?? "",
+              maxLines: 5,
+              softWrap: true,
+              style: TextStyle(
+                  fontSize: size.width > 850 ? 20 : 15,
+                  color: borderColor,
+                  fontWeight: FontWeight.w400),
+            ),
+          ],
         ),
       ),
     );
