@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'app_constants.dart';
 import 'splash_screen.dart';
@@ -34,12 +33,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
 
     return MaterialApp(
-      theme: ThemeData(
-        textTheme: GoogleFonts.mulishTextTheme(textTheme),
-      ),
       title: 'Ojas Jain',
       routes: {
         '/': (ctx) => const SplashScreen(),
