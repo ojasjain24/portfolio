@@ -37,7 +37,6 @@ dependencies:
   neon_widgets: ^2.0.0
   url_launcher: ^6.0.20
   flutter_svg: ^1.0.3
-  google_fonts: 2.1.0
 
 dev_dependencies:
   flutter_test:
