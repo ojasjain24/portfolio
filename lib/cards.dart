@@ -736,7 +736,7 @@ class FeatureCardState extends State<FeatureCard> {
                         : launch(widget.model.link ?? "");
                   },
                   child: Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.end,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       NeonText(
                         text: widget.model.type + " | ",
@@ -757,8 +757,8 @@ class FeatureCardState extends State<FeatureCard> {
                       widget.model.link != null
                           ? Image.asset(
                               "assets/images/link.png",
-                              width: size.width > 850 ? 30 : 25,
-                              height: size.width > 850 ? 30 : 25,
+                              width: size.width > 850 ? 20 : 15,
+                              height: size.width > 850 ? 20 : 15,
                             )
                           : const SizedBox(height: 0),
                     ],
