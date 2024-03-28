@@ -10,15 +10,6 @@ import 'models/education_model.dart';
 class PortfolioDetails {
   static String myName = "Ojas Jain";
   static String tagLine = "to Ojas' portfolio";
-  static List<String> skills = [
-    "Flutter",
-    "Android",
-    "Java",
-    "Python",
-    "Unity",
-    "Figma",
-    "Github",
-  ];
   static String profileImage = "assets/images/myPic.webp";
   static String bio =
       "I am a passionate software developer from India. I started coding in 2019. Since then I have been developing Android Apps, Cross Platform Apps, Games, Desktop Apps, Websites, Web apps, Developers Toolkits and many more things. I love to explore new domains. I like to take challenging tasks and solve problems.";
@@ -124,6 +115,17 @@ class PortfolioDetails {
       link: "https://iudx.org.in/",
       logo: "assets/images/iudx.png",
       companyName: "IUDX, IISc",
+      endDate: "Present",
+      startDate: "June 2023",
+      title: "Associate software developer",
+      description:
+          "Working as a part of UI team, handling one of the three data exchange platform provided by the company. Ideating and developing new features and working on improvement and refactoring of old code-base",
+      isCurrent: false,
+    ),
+    WorksModel(
+      link: "https://iudx.org.in/",
+      logo: "assets/images/iudx.png",
+      companyName: "IUDX, IISc",
       endDate: "October 2022",
       startDate: "May 2022",
       title: "Software development Intern",
@@ -134,7 +136,7 @@ class PortfolioDetails {
     WorksModel(
       link: "https://www.linkedin.com/company/affixchat/",
       companyName: "Affix",
-      endDate: "Present",
+      endDate: "May 2022",
       startDate: "July 2020",
       title: "Founder",
       logo: "assets/images/512.png",
@@ -413,8 +415,6 @@ class PortfolioDetails {
 
   static List<GenericModel> hobbies = [
     GenericModel(
-        name: "Guitar", type: "hobby", assetImage: "assets/images/guitar.png"),
-    GenericModel(
         name: "Photography",
         type: "hobby",
         assetImage: "assets/images/dslr.png"),
@@ -430,6 +430,12 @@ class PortfolioDetails {
         name: "Basketball",
         type: "hobby",
         assetImage: "assets/images/basketball.png"),
+    GenericModel(
+        name: "Guitar", type: "hobby", assetImage: "assets/images/guitar.png"),
+    GenericModel(
+        name: "Surfing",
+        type: "hobby",
+        assetImage: "assets/images/surfing.png"),
     GenericModel(
         name: "Volleyball",
         type: "hobby",
@@ -448,6 +454,19 @@ class PortfolioDetails {
         assetImage: "assets/images/doodle.png"),
   ];
   static List<GenericModel> features = [
+    GenericModel(
+        name: "Research paper",
+        description:
+            "Research paper titled 'INTEGRATING HAND GESTURE TRACKING WITH PHYSICAL AND DIGITAL TWIN OF ROBOTIC ARM' got published in IPDIMS 2023 international conference",
+        link:
+            "https://website.nitrkl.ac.in/Home/Events/EventDetails.aspx?hfjghfj=NTA1NDk=-IQOt430/g5k=&fgkyu4y=Q0VQ-MPz1h3M047U=",
+        type: "Achievement"),
+    GenericModel(
+        name: "YUKTI Finalist",
+        description:
+            "Idea and Prototype selected among top 250 projects out of 1 lakh applications and is selected for final round of YUKTI innovation challenge, organized by Governmnet of India",
+        link: "https://yukti.mic.gov.in/",
+        type: "Achievement"),
     GenericModel(
         name: "Neon widgets featured",
         description:
@@ -497,9 +516,9 @@ class PortfolioDetails {
     GenericModel(
         name: "Photography awards",
         description:
-        "Received a total of 65+ awards in photography contests, with some photos securing a rank in top 6% and scoring merit by Judges and Experts. ",
+            "Received a total of 65+ awards in photography contests, with some photos securing a rank in top 6% and scoring merit by Judges and Experts. ",
         link:
-        "https://www.photocrowd.com/photographer-community/241531/awards/?utm_source=sendinblue&utm_campaign=803a_Achievements_bronze_-_Profile_views&utm_medium=email",
+            "https://www.photocrowd.com/photographer-community/241531/awards/?utm_source=sendinblue&utm_campaign=803a_Achievements_bronze_-_Profile_views&utm_medium=email",
         type: "Award"),
   ];
 

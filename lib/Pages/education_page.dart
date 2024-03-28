@@ -4,6 +4,7 @@ import 'package:neon_widgets/neon_widgets.dart';
 import '../app_constants.dart';
 import '../cards.dart';
 import '../data_file.dart';
+import '../tabs.dart';
 import 'extras.dart';
 import 'home_page.dart';
 
@@ -30,72 +31,7 @@ class EducationPageState extends State<EducationPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: size.height * 0.1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const HomePage()));
-                        },
-                        child: const Text(
-                          "Home",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      super.widget));
-                        },
-                        child: const Text(
-                          "Education",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontWeight: FontWeight.w800),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const Extras()));
-                        },
-                        child: const Text(
-                          "More",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                  ],
-                ),
-              ),
+              Tabs(context: context, size: size, currentTab: "Education"),
               Container(
                 padding: size.width > 850
                     ? const EdgeInsets.symmetric(horizontal: 100, vertical: 10)

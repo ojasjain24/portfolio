@@ -5,6 +5,7 @@ import 'package:portfolio/cards.dart';
 
 import '../app_constants.dart';
 import '../data_file.dart';
+import '../tabs.dart';
 import 'education_page.dart';
 
 class Extras extends StatefulWidget {
@@ -29,68 +30,8 @@ class ExtrasState extends State<Extras> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: size.height * 0.1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const HomePage()));
-                        },
-                        child: const Text(
-                          "Home",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w100),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => const EducationPage()));
-                        },
-                        child: const Text(
-                          "Education",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w100),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: InkWell(
-                        hoverColor: Colors.white30,
-                        onTap: () {
-                          setState(() {});
-                        },
-                        child: const Text(
-                          "More",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontWeight: FontWeight.w800),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                  ],
-                ),
-              ),
+
+              Tabs(context: context, size: size, currentTab: "Extras"),
               Column(
                 children: [
                   const SizedBox(
