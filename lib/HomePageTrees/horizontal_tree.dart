@@ -77,7 +77,7 @@ Widget widgetTreeHorizontal(size) {
           const SizedBox(
             height: 10,
           ),
-          worksTree(padding: 40, screenSize: size),
+          projectsTree(padding: 40, screenSize: size),
         ],
       ),
     ),

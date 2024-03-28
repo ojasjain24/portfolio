@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Pages/education_page.dart';
+import 'package:portfolio/Pages/extras.dart';
+import 'package:portfolio/Pages/home_page.dart';
+import 'package:portfolio/Pages/work_page.dart';
 
 import 'app_constants.dart';
 import 'splash_screen.dart';
@@ -37,9 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: 'Ojas Jain',
       routes: {
-        '/': (ctx) => const SplashScreen(),
+        '': (ctx) => const SplashScreen(),
+        'home': (ctx) => const HomePage(),
+        'works': (ctx) => const WorkPage(),
+        'education': (ctx) => const EducationPage(),
+        'extras': (ctx) => const Extras(),
       },
-      initialRoute: '/',
+      initialRoute: '',
+
     );
   }
 }

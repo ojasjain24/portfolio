@@ -6,7 +6,7 @@ import '../app_constants.dart';
 import '../cards.dart';
 import '../data_file.dart';
 
-Widget worksTree({double padding = 20, required Size screenSize}) {
+Widget projectsTree({double padding = 20, required Size screenSize}) {
   return Container(
     padding: EdgeInsets.all(padding),
     child: Column(
@@ -89,107 +89,7 @@ Widget worksTree({double padding = 20, required Size screenSize}) {
         ),
         const SizedBox(
           height: 40,
-        ),
-        Align(
-          alignment: Alignment.center,
-          child: NeonText(
-            text: "Technical Work Experiences",
-            spreadColor: MainSpreadColor,
-            textSize: HeadingFontSize,
-          ),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        SizedBox(
-          width: screenSize.width,
-          child: Wrap(
-            runSpacing: 20,
-            spacing: 30,
-            alignment: WrapAlignment.spaceEvenly,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: [
-              ...(PortfolioDetails.techWorksList
-                  .map((e) => WorksCard(
-                        worksModel: e,
-                        screenSize: screenSize,
-                        parentPadding: padding,
-                      ))
-                  .toList())
-            ],
-          ),
-        ),
-        const SizedBox(
-          height: 40,
-        ),
-        Align(
-          alignment: Alignment.center,
-          child: NeonText(
-            text: "Non-technical Work Experiences",
-            spreadColor: MainSpreadColor,
-            textSize: HeadingFontSize,
-          ),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        SizedBox(
-          width: screenSize.width,
-          child: Wrap(
-            runSpacing: 20,
-            spacing: 30,
-            alignment: WrapAlignment.spaceEvenly,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: [
-              ...(PortfolioDetails.leadWorksList
-                  .map(
-                    (e) => WorksCard(
-                      worksModel: e,
-                      screenSize: screenSize,
-                      parentPadding: padding,
-                    ),
-                  )
-                  .toList())
-            ],
-          ),
-        ),
-        const SizedBox(
-          height: 40,
-        ),
-        Align(
-          alignment: Alignment.center,
-          child: NeonText(
-            text: "Volunteer Experience",
-            spreadColor: MainSpreadColor,
-            textSize: HeadingFontSize,
-          ),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        SizedBox(
-          width: screenSize.width,
-          child: Wrap(
-            runSpacing: 20,
-            spacing: 30,
-            alignment: WrapAlignment.spaceEvenly,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: [
-              ...(PortfolioDetails.volunteerWorksList
-                  .map(
-                    (e) => WorksCard(
-                      worksModel: e,
-                      screenSize: screenSize,
-                      parentPadding: padding,
-                    ),
-                  )
-                  .toList())
-            ],
-          ),
-        ),
-        const SizedBox(
-          height: 40,
-        ),
+        )
       ],
     ),
   );
