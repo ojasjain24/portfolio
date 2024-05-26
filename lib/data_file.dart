@@ -74,7 +74,7 @@ class PortfolioDetails {
             "This is a website to provide a basic information about me, showcase my works and projects. This is a neon themed website built using flutter and uses the neon widgets.",
         links: [
           IconLinkModel(
-              "assets/images/link.png", "https://myportfolio-67882.web.app/#/"),
+              "assets/images/link.png", "https://ojas-jain.web.app"),
           IconLinkModel("assets/images/github.png",
               "https://github.com/ojasjain24/portfolio"),
         ]),
@@ -238,6 +238,9 @@ class PortfolioDetails {
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
         "java"),
+        IconLinkModel(
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+        "angular"),
     IconLinkModel(
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
         "android"),
@@ -464,7 +467,7 @@ class PortfolioDetails {
     GenericModel(
         name: "YUKTI Finalist",
         description:
-            "Idea and Prototype selected among top 250 projects out of 1 lakh applications and is selected for final round of YUKTI innovation challenge, organized by Governmnet of India",
+            "Idea and Prototype got funding from Government of India after getting selected among top 250 projects out of 1 lakh applications and cleared final round of YUKTI innovation challenge, organized by Ministry of Education",
         link: "https://yukti.mic.gov.in/",
         type: "Achievement"),
     GenericModel(
