@@ -596,7 +596,9 @@ class CertificateCardState extends State<CertificateCard> {
         }
       },
       onTap: () {
-        launch(widget.model.link);
+        if (widget.model.link != "") {
+          launch(widget.model.link);
+        }
       },
       child: NeonContainer(
         lightSpreadRadius: size.width > 850 ? 15 : 4,

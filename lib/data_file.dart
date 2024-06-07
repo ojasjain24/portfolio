@@ -37,7 +37,9 @@ class PortfolioDetails {
             "Enigma Runner is a platformer game, in which the player has to collect artifacts at the end of every level to complete the story. There are some mind boggling twists at the end of every level, which the player needs to overcome to clear the level. Currently It has 4 levels and can be played on IOS, Android and windows",
         links: [
           IconLinkModel("assets/images/google-play.png",
-              "https://play.google.com/store/apps/details?id=com.Affix.EnigmaRunner")
+              "https://play.google.com/store/apps/details?id=com.Affix.EnigmaRunner"),
+              IconLinkModel("assets/images/itchio.png",
+              "https://affixgames.itch.io/enigma-runner")
         ]),
     BuildsModel(
         assetImage: "assets/images/512.png",
