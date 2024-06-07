@@ -139,7 +139,7 @@ class BuildsCardState extends State<BuildsCard> {
               ],
             ),
             Container(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
               alignment: Alignment.bottomLeft,
               child: Wrap(
                   alignment: WrapAlignment.start,
@@ -152,8 +152,8 @@ class BuildsCardState extends State<BuildsCard> {
                               },
                               child: Image.asset(
                                 e.imageAddress,
-                                width: 40,
-                                height: 40,
+                                width: 35,
+                                height: 35,
                                 fit: BoxFit.fitHeight,
                               ),
                             ))
